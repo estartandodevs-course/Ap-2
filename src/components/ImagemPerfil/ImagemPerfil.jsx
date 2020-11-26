@@ -7,7 +7,7 @@ export default function ImagemPerfil() {
     <label htmlFor="fileInput">
       <img src={imgPerfil} alt="" id="imagem"/>
     </label>
-    <input id="fileInput" type="file" accept="image/*" onChange={mudarFotoCadastro} />
+    <input id="fileInput" type="file" accept="image/png,image/jpg" onChange={mudarFotoCadastro} />
   </div>
   );
 }
