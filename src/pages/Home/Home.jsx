@@ -1,4 +1,4 @@
-import { StepHeader } from "./../../components/StepHeader";
+import { StepHeader } from "../../components/StepHeader/StepHeader";
 
 export function Home() {
   return (
