@@ -1,0 +1,20 @@
+#fileInput {
+  width: 0px;
+  overflow: hidden;
+}
+.imageUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body{
+  background: linear-gradient(270deg, #87E4C7 3.05%, #2767BC 102.69%, #2767BC 102.69%);
+}
+
+.img{
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  left: 132px;
+  top: 84px;
+}
