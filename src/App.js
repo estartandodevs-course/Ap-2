@@ -5,8 +5,10 @@ import ImagemPerfil from './components/ImagemPerfil/ImagemPerfil';
                         
 function App() {
   return (
+    <>
     <h1>Olá, mundo</h1>
     <ImagemPerfil/>
+    </>
   );
 }
 
