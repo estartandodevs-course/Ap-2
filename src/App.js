@@ -1,13 +1,16 @@
 import React from 'react';
-import './App.css';
-import './components/ImagemPerfil/ImagemPerfil'
+import { InputText } from './components/InputText/InputText';
 import ImagemPerfil from './components/ImagemPerfil/ImagemPerfil';
-                        
+import './components/ImagemPerfil/ImagemPerfil';
+
 function App() {
+
+  const isRequired=true;
+
   return (
     <>
-    <h1>Olá, mundo</h1>
     <ImagemPerfil/>
+    <InputText colorInput="rgba(255,255,255,1)" colorLabel="rgba(251,251,251,1)" label="Nome" isRequired={isRequired}/>
     </>
   );
 }
