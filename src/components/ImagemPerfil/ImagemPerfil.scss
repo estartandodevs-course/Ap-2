@@ -1,0 +1,17 @@
+#fileInput {
+  width: 0px;
+  overflow: hidden;
+}
+.imageUpload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#imagem{
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  left: 132px;
+  top: 84px;
+}
