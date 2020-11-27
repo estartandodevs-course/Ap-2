@@ -1,0 +1,33 @@
+@import "../../styles/fonts.scss";
+
+.step-container {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 375px;
+  height: 69px;
+  border: 1px #fbfbfb;
+  background: linear-gradient(180deg, #87e4c7 90%, #fbfbfb 102.69%);
+
+  h1 {
+    position: absolute;
+    height: 28px;
+    left: 25px;
+    color: #fbfbfb;
+    font-size: 24px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    font-family: "Baloo Tamma 2";
+  }
+
+  img {
+    position: absolute;
+    width: 88px;
+    height: 16px;
+    left: 263px;
+    top: 21.91px;
+  }
+}
