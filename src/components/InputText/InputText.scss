@@ -1,0 +1,33 @@
+.input-text{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    height: 80px;
+
+    background: linear-gradient(180deg, #87E4C7 3.05%, #2767BC 102.69%, #2767BC 102.69%);
+
+    .label{
+        padding-left:9px;
+        z-index:1;
+    }
+
+    .input{
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        position: absolute;
+        background-color: transparent;
+        padding-bottom: 5px;
+        padding-left:9px;
+        transition: all 0.2s ease-out;
+    }
+
+    .focus{
+        padding-top:6px;
+        padding-bottom:5px;
+        transform: translateY(+20px);
+    }
+}
