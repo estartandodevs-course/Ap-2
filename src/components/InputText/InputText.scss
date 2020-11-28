@@ -4,13 +4,15 @@
     align-items: flex-start;
     justify-content: center;
     position: relative;
-    height: 80px;
-
-    background: linear-gradient(180deg, #87E4C7 3.05%, #2767BC 102.69%, #2767BC 102.69%);
-
+    width: 300px;
+    margin: 41.39px auto 80px auto;
+    
     .label{
         padding-left:9px;
         z-index:1;
+        font-size:14px;
+        font-weight: 700;
+        line-height: 21px;
     }
 
     .input{

@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import './InputText.scss';
 
-
-
-
 export function InputText({ label, isRequired, colorLabel, colorInput}) {
 
     const [value, setValue] = useState("");
