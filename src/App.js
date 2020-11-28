@@ -1,17 +1,16 @@
-import React from 'react';
-import { InputText } from './components/InputText/InputText';
-import ImagemPerfil from './components/ImagemPerfil/ImagemPerfil';
-import './components/ImagemPerfil/ImagemPerfil';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { RegisterFirstStep } from "./pages/RegisterFirstStep/RegisterFirstStep.jsx";
+import React from "react";
 
 function App() {
-
-  const isRequired=true;
-
   return (
-    <>
-    <ImagemPerfil/>
-    <InputText colorInput="rgba(255,255,255,1)" colorLabel="rgba(251,251,251,1)" label="Nome" isRequired={isRequired}/>
-    </>
+      <Router>
+        <Switch>
+          <Route path="/">
+            <RegisterFirstStep />
+          </Route>
+        </Switch>
+      </Router>
   );
 }
 
