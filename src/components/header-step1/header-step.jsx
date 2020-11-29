@@ -1,6 +1,6 @@
-import './index.scss';
+import './header-step.scss';
 
-export function RegisterHeader() {
+export function RegisterHeader(props) {
     return (
         <div className="registerHeader"></div>
     )
