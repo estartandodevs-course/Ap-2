@@ -1,10 +1,17 @@
-import './styles/App.css'
-import { RegisterHeader } from './components/header-step1/header-step';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { RegisterFirstStep } from "./pages/RegisterFirstStep/RegisterFirstStep.jsx";
+import React from "react";
 
 function App() {
   return (
-    <RegisterHeader></RegisterHeader>
-  )
+      <Router>
+        <Switch>
+          <Route path="/">
+            <RegisterFirstStep />
+          </Route>
+        </Switch>
+      </Router>
+  );
 }
 
 export default App;

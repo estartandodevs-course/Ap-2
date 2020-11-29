@@ -1,0 +1,35 @@
+.input-text{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 300px;
+    margin: 41.39px auto 80px auto;
+    
+    .label{
+        padding-left:9px;
+        z-index:1;
+        font-size:14px;
+        font-weight: 700;
+        line-height: 21px;
+    }
+
+    .input{
+        outline: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        position: absolute;
+        background-color: transparent;
+        padding-bottom: 5px;
+        padding-left:9px;
+        transition: all 0.2s ease-out;
+    }
+
+    .focus{
+        padding-top:6px;
+        padding-bottom:5px;
+        transform: translateY(+20px);
+    }
+}
