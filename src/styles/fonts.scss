@@ -1,6 +1,13 @@
 @font-face {
     font-family: "Baloo Tamma 2";
-    src: url("../assets/fonts/BalooTamma2-Regular.ttf") format("truetype");
+    src: url("../assets/fonts/BigTitle/BalooTamma2-Regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 600;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/Default/Inter-Bold-slnt=0.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
 }
