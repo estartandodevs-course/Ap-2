@@ -1,3 +1,5 @@
+@import "../../styles/fonts.scss";
+
 .input-text{
     display: flex;
     flex-direction: column-reverse;
@@ -6,6 +8,7 @@
     position: relative;
     width: 300px;
     margin: 41.39px auto 80px auto;
+    font-family: "Inter";
     
     .label{
         padding-left:9px;
@@ -25,6 +28,7 @@
         padding-bottom: 5px;
         padding-left:9px;
         transition: all 0.2s ease-out;
+        font-weight: 500;
     }
 
     .focus{
