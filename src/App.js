@@ -1,16 +1,16 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { RegisterFirstStep } from "./pages/RegisterFirstStep/RegisterFirstStep.jsx";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import React from "react";
+import { Routes } from "./pages/routes";
+import { RegisterFirstStep } from "./pages/RegisterFirstStep/RegisterFirstStep";
+import { RegisterSecondStep } from "./pages/RegisterSecondStep/RegisterSecondStep";
+import { RegisterThirdStep } from "./pages/RegisterThirdStep/RegisterThirdStep";
+import { RegisterFourthStep } from "./RegisterFourthStep/RegisterFourthStep";
 
 function App() {
   return (
-      <Router>
-        <Switch>
-          <Route path="/">
-            <RegisterFirstStep />
-          </Route>
-        </Switch>
-      </Router>
+    <BrowserRouter>
+      <Routes />
+    </BrowserRouter>
   );
 }
 
