@@ -11,22 +11,23 @@
     border-radius: 5px;
     margin: 50px auto 20px;
     font-family: "Inter";
-}
 
-.label{
-    color: #4179C3;
-    font-weight: bold;
-    margin-right: 17px;
-    font-size:14px;
-}
-input[type=Date]{ 
-    background:#F8F8F8;
-    color:#9F9F9F;
-    text-transform: uppercase;
-    font-size:15px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-weight: 500;
+    .label{
+        color: #4179C3;
+        font-weight: bold;
+        margin-right: 17px;
+        font-size:14px;
+    }
+    
+    input[type=Date]{ 
+        background:#F8F8F8;
+        color:#9F9F9F;
+        text-transform: uppercase;
+        font-size:15px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-weight: 500;
+    }
 }
 
