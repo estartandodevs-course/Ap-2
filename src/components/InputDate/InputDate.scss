@@ -10,12 +10,12 @@
     box-sizing: border-box;
     border-radius: 5px;
     margin: 50px auto 20px;
+    font-family: "Inter";
 }
 
 .label{
     color: #4179C3;
     font-weight: bold;
-    font-family: Arial;
     margin-right: 17px;
     font-size:14px;
 }
@@ -27,5 +27,6 @@ input[type=Date]{
     outline: none;
     border: none;
     cursor: pointer;
+    font-weight: 500;
 }
 
