@@ -40,12 +40,11 @@ function verificaCheck(event, classInput){
 
   const check = event.target.checked;
   const input = document.querySelector("."+classInput);
-  const checkboxFunction = document.querySelector(".checkboxFunction+.checkboxFunction .divCheckbox");
+  const divCheckbox = document.querySelector(".checkboxFunction+.checkboxFunction .divCheckbox");
   if(check)
   {
     input.style.display="inline";
-    if(check === "input1")
-      checkboxFunction.style.marginTop="20px";
+    divCheckbox.style.marginTop="20px";
   }
   else{
     input.style.display="none";
