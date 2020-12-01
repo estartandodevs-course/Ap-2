@@ -5,10 +5,9 @@ export default function Checkbox(props) {
   return (
     <div className="checkboxFunction">
       <div className="divCheckbox">
-      <input type="checkbox" id={id} className="checkBox" onChange={(event)=>teste(event,classInput)}></input>
+      <input type="checkbox" id={id} className="checkBox" onChange={(event)=>verificaCheck(event,classInput)}></input>
         <label htmlFor={label} className="label">{content}</label>
       </div>
-      
         <div className="inputCheck">
           <input type="text" placeholder={placeHolder} className={classInput} style=
           {
@@ -30,7 +29,7 @@ export default function Checkbox(props) {
   );
 }
 
-function teste(event,classInput){
+function verificaCheck(event,classInput){
   const check = event.target.checked;
   const input = document.querySelector("."+classInput);
   if(check)
