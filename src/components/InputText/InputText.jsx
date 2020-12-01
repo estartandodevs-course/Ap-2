@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './InputText.scss';
 
-export function InputText({ label, isRequired, colorLabel, colorInput, className}) {
+export function InputText({ label, isRequired, colorLabel, colorInput, className, classInput}) {
 
     const [value, setValue] = useState("");
     const [focused, setFocused ] = useState(false);
@@ -15,7 +15,7 @@ export function InputText({ label, isRequired, colorLabel, colorInput, className
     const HasClassName = className != null ? "input input-bio" : "input";
     const inputClass = isInputDown ? `${HasClassName} focus` : `${HasClassName}`;
         return (
-                <div className="input-text">
+            <div className={`${classInput} input-text`}>
                     <input 
                         type="text"
                         maxlength="250" 

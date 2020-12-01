@@ -26,8 +26,23 @@ export function RegisterFirstStep() {
       <section className="form">
         <InputDate />
         <ContainerSelect />
-        <Checkbox content="Você é estudante?" label="check" id="check" classInput="input1" placeHolder="Faculdade/Escola:"></Checkbox>
-        <Checkbox content="Você trabalha?" label="check2" id="check2" classInput="input2" placeHolder="Empresa:"> </Checkbox>
+        <Checkbox
+          content="Você é estudante?" 
+          for="check" 
+          id="check" 
+          classInput="input1" 
+          className="input-bio"
+          label="Faculdade/Escola"
+
+        />
+        <Checkbox 
+          content="Você trabalha?" 
+          for="check2" 
+          id="check2" 
+          classInput="input2"
+          className="input-bio" 
+          label="Empresa"
+        />
         <InputText
           colorInput="rgba(204,204,204,1)"
           colorLabel="rgba(39,103,188,1)"
