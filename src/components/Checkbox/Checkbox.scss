@@ -6,15 +6,12 @@
   .checkBox{
     margin-right: 34px;
   }
-  .label{
+  .label, ::placeholder{
     color: #2767BC;
     font-family: Inter;
     font-style: normal;
     font-weight: bold;
     letter-spacing: 0.02em;
-  }
-  .checkBox:checked +.label{
-    color:red;
   }
   .inputCheck{
     margin-top: 40px;

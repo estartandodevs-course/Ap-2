@@ -1,20 +1,43 @@
 import "./Checkbox.scss";
 
 export default function Checkbox(props) {
-  const {content,label,id} = props;
+  const {content,label,id,classInput,placeHolder} = props;
   return (
     <div className="checkboxFunction">
-
-
       <div className="divCheckbox">
-      <input type="checkbox" id={id} className="checkBox" onChange={(event)=>console.log(event)}></input>
+      <input type="checkbox" id={id} className="checkBox" onChange={(event)=>teste(event,classInput)}></input>
         <label htmlFor={label} className="label">{content}</label>
       </div>
       
         <div className="inputCheck">
-          <input type="text" placeholder="Teste" className="input"></input>
+          <input type="text" placeholder={placeHolder} className={classInput} style=
+          {
+            {
+              display: 'none',
+              borderTop: 'transparent',
+              borderLeft: 'transparent',
+              borderRight: 'transparent',
+              borderBottom: 'groove',
+              background: 'transparent', 
+              outline: 'none',
+              width:'335px'
+            }
+          }>
+          </input>
         </div>
         
     </div>
   );
+}
+
+function teste(event,classInput){
+  const check = event.target.checked;
+  const input = document.querySelector("."+classInput);
+  if(check)
+  {
+    input.style.display="inline";
+    input.value="";
+  }
+  else
+    input.style.display="none";
 }
