@@ -1,0 +1,23 @@
+.checkboxFunction{
+  max-width: 335px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+
+  .checkBox{
+    margin-right: 13px;
+  }
+
+  .label, ::placeholder{
+    color: #2767BC;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+  }
+
+  +.checkboxFunction{
+    margin-bottom:43px;
+  }
+}

@@ -3,11 +3,11 @@ import step1 from "../../assets/images/step1.png";
 import { InputText } from "../../components/InputText/InputText";
 import ImagemPerfil from "../../components/ImagemPerfil/ImagemPerfil";
 import "../../components/ImagemPerfil/ImagemPerfil";
-import { RegisterHeader } from "../../components/header-step1/HeaderStep1";
 import { InputDate } from "../../components/InputDate/InputDate";
-import './RegisterFirstStep.scss';
+import "./RegisterFirstStep.scss";
+import Checkbox from "../../components/Checkbox/Checkbox"
 import { ContainerSelect } from "../../components/ContainerSelect/ContainerSelect";
-
+import { RegisterHeader} from "../../components/header-step1/HeaderStep1";
 
 export function RegisterFirstStep() {
   const isRequired = true;
@@ -26,6 +26,8 @@ export function RegisterFirstStep() {
       <section className="form">
         <InputDate />
         <ContainerSelect />
+        <Checkbox content="Você é estudante?" label="check" id="check" classInput="input1" placeHolder="Faculdade/Escola:"></Checkbox>
+        <Checkbox content="Você trabalha?" label="check2" id="check2" classInput="input2" placeHolder="Empresa:"> </Checkbox>
         <InputText
           colorInput="rgba(204,204,204,1)"
           colorLabel="rgba(39,103,188,1)"
