@@ -18,7 +18,7 @@ export function InputText({ label, isRequired, colorLabel, colorInput, className
             <div className={`${classInput} input-text`}>
                     <input 
                         type="text"
-                        maxlength="250" 
+                        maxLength="250" 
                         style={{
                             borderColor: colorInput,
                             borderWidth: "1px",
