@@ -14,12 +14,14 @@ export function SelectOptions(props) {
     }),
     control: (base, state) => ({
       ...base,
-      width: "335px",
-      height: "47px",
+      width: "100%",
+      height: "40px",
       borderRadius: "5px",
       fontSize: "14px",
       lineHeight: "21px",
       letterSpacing: "0.02em",
+      boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.25)",
+      border: 0,
       backgroundColor: state.isSelected
         ? "#f8f8f8"
         : "linearGradient(180deg, #87e4c7 3.05%, #5cacc2 77.55%)",
