@@ -1,0 +1,10 @@
+@import '../../styles/variables.scss';
+
+
+.footer {
+    min-width: 350px;
+    max-width: 100vw;
+    height: 60px;
+    background-color: $cinza-4;
+    box-shadow: $box-shadow;
+}
