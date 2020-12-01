@@ -10,7 +10,7 @@ export default function Checkbox(props) {
         <label htmlFor={htmlfor} className="label">{content}</label>
       </div>
       <div className="inputCheck">
-        <InputText label={label} isRequired={true} colorLabel="rgba(39,103,188,1)" colorInput="rgba(204,204,204,1)" classInput={classInput} className="input-bio"/>
+        <InputText label={label} isRequired={true} colorLabel="rgba(39,103,188,1)" colorInput="rgba(204,204,204,1)" classInput={classInput} className={className}/>
       </div>
         
     </div>
