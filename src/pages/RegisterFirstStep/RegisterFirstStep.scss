@@ -6,4 +6,9 @@
     align-items: center;
     width: 375px;
     margin: 0 auto;
+    
+    .form{
+        display: flex;
+        flex-direction: column;
+    }
 }

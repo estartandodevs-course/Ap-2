@@ -1,9 +1,10 @@
 @import "../../styles/fonts.scss";
+@import "../../pages/RegisterFirstStep/RegisterFirstStep.scss";
 
 .input-text{
     position: relative;
     font-family: "Inter";
-    margin: 16.39px auto 80px auto;
+    margin-top: 16.39px;
     
     .label{
         z-index:1;
@@ -34,4 +35,13 @@
         padding-bottom:5px;
         transform: translateY(+20px);
     }
+
+    .input-bio{
+        left:0;
+
+        + .label{
+            margin-left:9px;
+        }
+    }
+    
 }
