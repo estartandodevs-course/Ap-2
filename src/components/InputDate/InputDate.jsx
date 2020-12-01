@@ -3,9 +3,9 @@ import './InputDate.scss';
 
 export function InputDate(){
     return (
-        <div class="wrapper">
-            <label class="label" required>Data de Nascimento:</label>
-            <input class="date" type="Date" />
+        <div className="wrapper">
+            <label className="label" required>Data de Nascimento:</label>
+            <input className="date" type="Date" />
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from "react-router-dom";
-import { RegisterFourthStep } from '../RegisterFourthStep/RegisterFourthStep';
+import { RegisterFourthStep } from './RegisterFourthStep/RegisterFourthStep';
 import { Home } from './Home/Home';
 import { RegisterFirstStep } from './RegisterFirstStep/RegisterFirstStep';
 import { RegisterSecondStep } from './RegisterSecondStep/RegisterSecondStep';

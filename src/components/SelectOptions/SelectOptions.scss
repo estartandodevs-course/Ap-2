@@ -1,0 +1,65 @@
+@import "../../styles/fonts.scss";
+
+.select-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  align-items: center;
+  justify-content: center;
+
+  .select-component {
+    background: linear-gradient(180deg, #87e4c7 3.05%, #5cacc2 77.55%);
+    border-radius: 5px;
+  }
+
+  .option-list {
+    background: #f8f8f8;
+    color: #999999;
+  }
+
+  .placeholder {
+    display: flex;
+    background: #f8f8f8;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 335px;
+    height: 47px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("../../assets/icons/chevron-down.png");
+    background-repeat: no-repeat;
+    background-position: right;
+
+    span {
+      color: #2767bc;
+      font-family: "Inter";
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+      padding-left: 20px;
+      font-weight: 900;
+    }
+  }
+
+  .select {
+    &__menu-list::-webkit-scrollbar {
+      width: 7px;
+      max-height: 105px;
+      border-radius: 5px;
+    }
+    &__menu-list::-webkit-scrollbar-track {
+      background: #e0e0e0;
+      border-radius: 5px;
+    }
+    &__menu-list::-webkit-scrollbar-track-piece {
+      background: #e0e0e0;
+      border-radius: 5px;
+    }
+    &__menu-list::-webkit-scrollbar-thumb {
+      background: #fdca40;
+      border-radius: 5px;
+    }
+  }
+}
