@@ -6,7 +6,7 @@ import "../../components/ImagemPerfil/ImagemPerfil";
 import { InputDate } from "../../components/InputDate/InputDate";
 import Checkbox from "../../components/Checkbox/Checkbox"
 import { ContainerSelect } from "../../components/ContainerSelect/ContainerSelect";
-
+import Footer from "../../components/footer/footer.jsx";
 
 export function RegisterFirstStep() {
   const isRequired = true;
@@ -24,6 +24,7 @@ export function RegisterFirstStep() {
       <Checkbox content="Você é estudante?" label="check" id="check" classInput="input1" placeHolder="Faculdade/Escola:"></Checkbox>
       <Checkbox content="Você trabalha?" label="check2" id="check2" classInput="input2" placeHolder="Empresa:"> </Checkbox>
       <ContainerSelect />
+      <Footer></Footer>
     </>
   );
 }
