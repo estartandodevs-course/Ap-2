@@ -1,0 +1,27 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+
+.footer {
+    font-family: "Baloo Tamma 2";
+    min-width: 350px;
+    max-width: 100vw;
+    height: 60px;
+    background-color: $cinza-4;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        text-decoration: none;
+        font-weight: 600;
+        padding: 20px;
+    }
+    #proximo {
+        color: $primary-2;
+    }
+    #anterior {
+        color: $primary-2;
+        opacity: 50%;
+    }
+}
