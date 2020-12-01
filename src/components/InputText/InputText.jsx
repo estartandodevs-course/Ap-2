@@ -16,8 +16,27 @@ export function InputText({ label, isRequired, colorLabel, colorInput, className
     const inputClass = isInputDown ? `${HasClassName} focus` : `${HasClassName}`;
         return (
                 <div className="input-text">
-                <input style={{ borderColor: colorInput, borderWidth: "1px", color: "rgba(255,255,255,1)"}} onChange={onChange} value={value} onBlur={() => setFocused(false)} onFocus={() => setFocused(true)} className={inputClass} type="text" required={isRequired} />
-                <label style={{ color: colorLabel }} className="label">{label}:</label>
+                    <input 
+                        type="text"
+                        maxlength="250" 
+                        style={{
+                            borderColor: colorInput,
+                            borderWidth: "1px",
+                            color: "rgba(255,255,255,1)"
+                            }} 
+                        onChange={onChange}
+                        value={value}
+                        onBlur={() => setFocused(false)}
+                        onFocus={() => setFocused(true)}
+                        className={inputClass}
+                        required={isRequired}
+                    />
+                    
+                    <label
+                        style={{
+                            color: colorLabel 
+                        }}
+                        className="label">{label}:</label>
                 </div>
         )
 }
