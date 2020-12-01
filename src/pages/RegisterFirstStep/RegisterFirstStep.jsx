@@ -5,20 +5,24 @@ import ImagemPerfil from "../../components/ImagemPerfil/ImagemPerfil";
 import "../../components/ImagemPerfil/ImagemPerfil";
 import { RegisterHeader } from "../../components/header-step1/HeaderStep1";
 import { InputDate } from "../../components/InputDate/InputDate";
+import './RegisterFirstStep.scss';
 
 export function RegisterFirstStep() {
   const isRequired = true;
   return (
-    <>
-      <StepHeader content="Sobre você" src={step1} alt="Steps"></StepHeader>
-      <ImagemPerfil />
-      <InputText
-        colorInput="rgba(255,255,255,1)"
-        colorLabel="rgba(251,251,251,1)"
-        label="Nome"
-        isRequired={isRequired}
-      />
+    <div className="content">
+    <RegisterHeader>
+        <StepHeader content="Sobre você" src={step1} alt="Steps"></StepHeader>
+        <ImagemPerfil />
+        <InputText
+          colorInput="rgba(255,255,255,1)"
+          colorLabel="rgba(251,251,251,1)"
+          label="Nome"
+          isRequired={isRequired}
+        />
+      </RegisterHeader>
       <InputDate />
-    </>
+      <InputDate />
+    </div>
   );
 }
