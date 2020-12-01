@@ -5,6 +5,7 @@ import ImagemPerfil from "../../components/ImagemPerfil/ImagemPerfil";
 import "../../components/ImagemPerfil/ImagemPerfil";
 import { RegisterHeader } from "../../components/header-step1/HeaderStep1";
 import { InputDate } from "../../components/InputDate/InputDate";
+import { ContainerSelect } from "../../components/ContainerSelect/ContainerSelect";
 
 export function RegisterFirstStep() {
   const isRequired = true;
@@ -19,6 +20,7 @@ export function RegisterFirstStep() {
         isRequired={isRequired}
       />
       <InputDate />
+      <ContainerSelect />
     </>
   );
 }
