@@ -7,7 +7,7 @@ import { InputDate } from "../../components/InputDate/InputDate";
 import "./RegisterFirstStep.scss";
 import Checkbox from "../../components/Checkbox/Checkbox"
 import { ContainerSelect } from "../../components/ContainerSelect/ContainerSelect";
-import { RegisterHeader} from "../../components/header-step1/HeaderStep1";
+import { RegisterHeader} from "../../components/HeaderStep1/HeaderStep1";
 import Footer from "../../components/StepFooter/StepFooter";
 
 export function RegisterFirstStep() {
@@ -18,8 +18,8 @@ export function RegisterFirstStep() {
           <StepHeader content="Sobre você" src={step1} alt="Steps"></StepHeader>
           <ImagemPerfil />
           <InputText
-            colorInput="rgba(255,255,255,1)"
-            colorLabel="rgba(251,251,251,1)"
+            colorInput="rgba(251,251,251,1)"
+            colorLabel="rgba(255,255,255,1)"
             label="Nome"
             isRequired={isRequired}
           />
