@@ -11,23 +11,6 @@ export default function Checkbox(props) {
       </div>
       <div className="inputCheck">
         <InputText label={label} isRequired={true} colorLabel="rgba(39,103,188,1)" colorInput="rgba(204,204,204,1)" classInput={classInput} className="input-bio"/>
-         {/* <input type="text" placeholder={placeHolder} className={classInput} style=
-          {
-            {
-              display: 'none',
-              borderColor: 'rgba(204,204,204,1)',
-              borderWidth: '1px',
-              borderTop: 'transparent',
-              borderLeft: 'transparent',
-              borderRight: 'transparent',
-              background: 'transparent', 
-              outline: 'none',
-              width:'335px',
-              paddingLeft: '10px',
-              paddingBottom: '5px'
-            }
-          }>
-          </input> */}
       </div>
         
     </div>
@@ -44,7 +27,9 @@ function verificaCheck(event, classInput){
   if(check)
   {
     input.style.display="inline";
-    divCheckbox.style.marginTop="20px";
+    if(check === "input1"){
+      divCheckbox.style.marginTop="20px";
+    }
   }
   else{
     input.style.display="none";

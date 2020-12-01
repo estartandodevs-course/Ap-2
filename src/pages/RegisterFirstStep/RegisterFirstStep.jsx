@@ -8,6 +8,7 @@ import "./RegisterFirstStep.scss";
 import Checkbox from "../../components/Checkbox/Checkbox"
 import { ContainerSelect } from "../../components/ContainerSelect/ContainerSelect";
 import { RegisterHeader} from "../../components/header-step1/HeaderStep1";
+import Footer from "../../components/StepFooter/StepFooter";
 
 export function RegisterFirstStep() {
   const isRequired = true;
@@ -51,6 +52,7 @@ export function RegisterFirstStep() {
           className="input-bio"
         />
       </section>
+      <Footer></Footer>
     </div>
   );
 }
