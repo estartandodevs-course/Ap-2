@@ -2,10 +2,18 @@
   max-width: 335px;
   display: flex;
   flex-direction: column;
-  margin: 40px auto;
+  margin-top: 40px;
+  min-height: 21px;
+  margin-bottom:45px;
+
   .checkBox{
-    margin-right: 34px;
+    margin-right: 13px;
   }
+
+  .inputCheck{
+    margin-top:20px;
+  }
+
   .label, ::placeholder{
     color: #2767BC;
     font-family: Inter;
@@ -14,7 +22,9 @@
     font-size: 14px;
     letter-spacing: 0.02em;
   }
-  .inputCheck{
-    margin-top: 40px;
+
+  +.checkboxFunction{
+    margin-bottom:43px;
+    margin-top:0;
   }
 }

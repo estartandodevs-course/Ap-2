@@ -1,15 +1,13 @@
-.wrapper{
+.content-date{
     background: rgba(248,248,248,1);
-    max-width: 335px;
+    width: 335px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     height: 47px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 13px 0px 13px 5px;
-    box-sizing: border-box;
+    padding: 13px 3.17px 13px 20px;
     border-radius: 5px;
-    margin: 50px auto 20px;
     font-family: "Inter";
 
     .label{
@@ -18,7 +16,7 @@
         margin-right: 17px;
         font-size:14px;
     }
-    
+
     input[type=Date]{ 
         background:#F8F8F8;
         color:#9F9F9F;
