@@ -43,7 +43,7 @@ export function SelectOptions(props) {
     }),
     singleValue: (base) => ({
       ...base,
-      color: "#cecbcb",
+      color: "#FBFBFB",
     }),
     indicatorsContainer: (base) => ({
       ...base,
