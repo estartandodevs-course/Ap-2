@@ -4,3 +4,14 @@ body {
     margin-right: auto;
     background-color: gray;
 }
+
+.home-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .profile-container {
+      display: flex;
+      flex-direction: column;
+  }
+}
