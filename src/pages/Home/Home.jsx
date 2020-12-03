@@ -1,7 +1,10 @@
 import React from 'react';
+import ImagemPerfilMenor from "../../components/ImagemPerfilMenor/ImagemPerfilMenor";
 
 export function Home(){
     return (
-        <div>TO DO HOME</div>
+        <div>
+            <ImagemPerfilMenor/>
+        </div>
     )
 }
