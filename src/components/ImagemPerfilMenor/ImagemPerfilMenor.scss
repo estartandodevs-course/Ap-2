@@ -1,4 +1,8 @@
-.imagemMenor{
+.imagem{
   display:flex;
-  align-items: center;
+  justify-content: center;
+  #imagemMenor{
+    margin-top: 42px;
+    margin-left: 29px;
+  }
 }
