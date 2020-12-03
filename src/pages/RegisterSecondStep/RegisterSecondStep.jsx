@@ -3,8 +3,6 @@ import ImagemPerfilMenor from "../../components/ImagemPerfilMenor/ImagemPerfilMe
 
 export function RegisterSecondStep() {
     return (
-        <div>
-            <ImagemPerfilMenor/>
-        </div>
+        <div>TO DO STEP 2</div>
     )
 }
