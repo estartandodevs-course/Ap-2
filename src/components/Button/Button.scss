@@ -1,5 +1,6 @@
 @import "../../assets/fonts/BigTitle/BalooTamma2-Regular.ttf";
 @import "../../assets/fonts/Default/Inter-Regular-slnt=0.ttf";
+@import "../../styles/variables.scss";
 
 .btn {
   outline: none;
@@ -21,11 +22,11 @@
 
 .btn-font1 {
     font-family: "Baloo Tamma 2";
-    color: #ffffff;
+    color: $color;
 }
 
 .btn-font2 {
     font-family: "Inter";
-    color: #FBFBFB;
+    color: $cinza-4;
 }
 
