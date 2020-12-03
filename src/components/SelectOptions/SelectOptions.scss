@@ -1,4 +1,5 @@
 @import "../../styles/fonts.scss";
+@import "../../styles/variables.scss";
 
 .select-container {
   width: 335px;
@@ -11,13 +12,13 @@
   }
 
   .option-list {
-    background: #f8f8f8;
-    color: #999999;
+    background: $background;
+    color: $cinza-1;
   }
 
   .placeholder {
     display: flex;
-    background: #f8f8f8;
+    background: $background;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     width: 335px;
     height: 47px;
@@ -32,7 +33,7 @@
     background-position: right;
 
     span {
-      color: #2767bc;
+      color: $primary-2;
       font-family: "Inter";
       font-size: 14px;
       line-height: 21px;
