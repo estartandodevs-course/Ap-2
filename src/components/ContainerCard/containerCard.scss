@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+.container{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 50px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  .image{
+    padding: 5px 9px 5px 8px;
+  }
+  .text{
+    margin-right: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+  }
+}
