@@ -1,17 +1,9 @@
 body {
-    width: 375px;
+  width: 100%;
+  height: 100%;
+    max-width: 375px;
     margin-left: auto;
     margin-right: auto;
     background-color: gray;
 }
 
-.home-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .profile-container {
-      display: flex;
-      flex-direction: column;
-  }
-}

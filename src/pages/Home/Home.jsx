@@ -1,9 +1,9 @@
 import React from "react";
 import BackgroundHome from "../../components/BackgroundHome/BackgroundHome.jsx";
-import ImagemPerfilMenor from "../../components/ImagemPerfilMenor/ImagemPerfilMenor";
-import { Button } from "../../components/Button/Button";
+
 import { useHistory } from "react-router-dom";
 import "./Home.scss";
+import { LayoutHome } from "../../components/LayoutHome/LayoutHome.jsx";
 
 export function Home() {
   const history = useHistory();
@@ -13,22 +13,10 @@ export function Home() {
   }
 
   return (
-    <div className="home-container">
-      <BackgroundHome>
-        <div className="profile-container">
-          <ImagemPerfilMenor />
-          <Button
-            width="136px"
-            background="#184177"
-            height="32px"
-            borderRadius="10px"
-            className="btn btn-profile btn-font1 btn-text"
-            onClick={onClick}
-          >
-            Editar Perfil
-          </Button>
-        </div>
-      </BackgroundHome>
-    </div>
+    <BackgroundHome>
+      <LayoutHome onClick={onClick}>
+  
+      </LayoutHome>
+    </BackgroundHome>
   );
 }
