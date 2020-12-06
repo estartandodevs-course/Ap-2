@@ -1,7 +1,6 @@
 import React from "react";
 import BackgroundHome from "../../components/BackgroundHome/BackgroundHome.jsx";
-
-import { useHistory } from "react-router-dom";
+import { useHistory, BrowserRouter as Router } from "react-router-dom";
 import "./Home.scss";
 import { LayoutHome } from "../../components/LayoutHome/LayoutHome.jsx";
 
@@ -13,10 +12,10 @@ export function Home() {
   }
 
   return (
-    <BackgroundHome>
-      <LayoutHome onClick={onClick}>
-  
-      </LayoutHome>
-    </BackgroundHome>
+    <Router>
+      <BackgroundHome>
+        <LayoutHome onClick={onClick} />
+      </BackgroundHome>
+    </Router>
   );
 }

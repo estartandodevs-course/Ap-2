@@ -1,8 +1,9 @@
 .imagem{
   display:flex;
-  justify-content: center;
+ // justify-content: center;
   #imagemMenor{
-    margin-top: 42px;
-    margin-left: 29px;
+    padding-top: 42px;
+  //  padding-left: 29px;
+    padding-bottom: 55px;
   }
 }

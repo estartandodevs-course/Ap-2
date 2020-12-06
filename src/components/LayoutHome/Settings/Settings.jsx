@@ -1,0 +1,1 @@
+export const Settings = () => <div>config</div>;

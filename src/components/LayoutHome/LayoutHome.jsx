@@ -1,75 +1,64 @@
 import ImagemPerfilMenor from "../../components/ImagemPerfilMenor/ImagemPerfilMenor";
 import { Button } from "../../components/Button/Button";
 import Typography from "../Typography/Typography";
+import "./LayoutHome.scss";
+import { NavBar } from "./NavBar";
+import { Notifications } from "../../components/LayoutHome/Notifications/Notifications";
+import { Settings } from "../../components/LayoutHome/Settings/Settings";
+import { Calendar } from "../../components/LayoutHome/Calendar/Calendar";
+import { Matches } from "../../components/LayoutHome/Matches/Matches";
+import { Switch, Route, Link } from "react-router-dom";
 
-const STYLES = {
-  layout: {
-    display: "flex",
-    flexDirection: "column",
-    background: "white",
-    height: "100vh",
-  },
-  notification: {
-    display: "flex",
-    flexDirection: "column",
-    background: "red",
-    height: "100%",
-  },
-  config: {
-    display: "flex",
-    flexDirection: "column",
-    background: "green",
-    height: "100%",
-    width: "100%",
-  },
-  button: {
-    width: "136px",
-    height: "32px",
-    background: "#184177",
-    borderRadius: "10px",
-  },
-};
-
-const NavBar = ({ children }) => <nav>{children}</nav>;
-
-const SideBar = ({ children }) => <aside>{children}</aside>;
+const SideBar = () => (
+  <aside>
+    <Link to="/notifications">Notif</Link>
+    <Link to="/calendar">calendar</Link>
+    <Link to="/matches">matches</Link>
+    <Link to="/settings">config</Link>
+  </aside>
+);
 
 const Header = ({ onClick }) => (
   <header>
-    <ImagemPerfilMenor />
-    <Typography type="bigTitle">Isabel Vieira</Typography>
-    <Button
-      width="136px"
-      background="#184177"
-      height="32px"
-      borderRadius="10px"
-      className="btn btn-profile btn-font1 btn-text"
-      onClick={onClick}
-    >
-      Editar Perfil
-    </Button>
+    <div className="header">
+      <ImagemPerfilMenor />
+      <div className="header-components">
+        <Typography type="bigTitle">Isabel Vieira</Typography>
+        <Button
+          width="136px"
+          background="#184177"
+          height="32px"
+          borderRadius="10px"
+          className="btn btn-profile btn-font1 btn-text"
+          onClick={onClick}
+        >
+          Editar Perfil
+        </Button>
+      </div>
+    </div>
+
     <hr />
   </header>
 );
 
-export const LayoutHome = ({ children, onClick }) => (
-  <div>
-    <div>
-      <div>
+const Routes = () => (
+  <Switch>
+    <Route path="/notifications" component={Notifications} />
+    <Route path="/calendar" component={Calendar} />
+    <Route path="/matches" component={Matches} />
+    <Route path="/settings" component={Settings} />
+  </Switch>
+);
+
+export const LayoutHome = ({ onClick }) => (
+  <div className="layout-container">
+    <div className="layout-content">
+      <div className="layout-header-content">
         <Header onClick={onClick} />
-        {children}
+        <Routes />
       </div>
       <SideBar />
     </div>
     <NavBar />
-  </div>
-);
-
-const Notification = () => <div style={STYLES.notification}>Notificações</div>;
-
-const AppConfig = () => (
-  <div style={STYLES.config}>
-    <hr style={{ borderColor: "black" }} />
-    config
   </div>
 );
