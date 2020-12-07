@@ -16,10 +16,15 @@
       //width: 100%;
       header {
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        // padding-left: 29px;
         .header {
           display: flex;
           flex-direction: row;
-          width: 100%;
+          //   width: 100%;
           .header-components {
             display: flex;
             flex-direction: column;
