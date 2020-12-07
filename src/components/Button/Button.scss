@@ -1,0 +1,31 @@
+@import "../../assets/fonts/BigTitle/BalooTamma2-Regular.ttf";
+@import "../../assets/fonts/Default/Inter-Regular-slnt=0.ttf";
+@import "../../styles/variables.scss";
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-profile {
+  filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.btn-text {
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.btn-font1 {
+    font-family: "Baloo Tamma 2";
+    color: $color;
+}
+
+.btn-font2 {
+    font-family: "Inter";
+    color: $cinza-4;
+}
+
