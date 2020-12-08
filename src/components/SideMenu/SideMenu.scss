@@ -1,0 +1,26 @@
+.menu{
+    position: relative;
+    .divisor{
+        margin-bottom: 26px;
+        margin-top: 16px;
+        width: 48px;
+        color: rgba(153,153,153,1);
+    }
+
+    .menu-item.active{
+        filter:invert(7%) sepia(25%) saturate(471%) hue-rotate(356deg) brightness(91%) contrast(135%);
+    }
+    .notification{
+        /* relative 
+        position: relative;
+        top: -10px;
+        right: 3px;
+        */
+
+        /* absolute 
+        position: absolute;
+        top: -10px;
+        right: 3px;
+        */
+    }
+}
