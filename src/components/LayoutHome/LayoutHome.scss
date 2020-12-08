@@ -41,11 +41,17 @@
         }
       }
     }
-    aside {
+    .side-menu{
+      margin-top:46px;
+      list-style: none;
+      width: 71px;
       display: flex;
       flex-direction: column;
-      height: 100%;
-    }
+      align-items: center;
+      text-align: center;
+      margin-left: 371px;
+      position: fixed;
+  }
   }
   nav {
     display: flex;

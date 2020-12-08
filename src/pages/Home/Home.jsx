@@ -13,9 +13,11 @@ export function Home() {
 
   return (
     <Router>
-      <BackgroundHome>
-        <LayoutHome onClick={onClick} />
-      </BackgroundHome>
+      <div className="home-container">
+        <BackgroundHome>
+          <LayoutHome onClick={onClick} />
+        </BackgroundHome>
+      </div>
     </Router>
   );
 }

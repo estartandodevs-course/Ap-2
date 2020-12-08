@@ -1,7 +1,21 @@
 body {
   width: 375px;
-  height: 785px;
+  height: auto;
   // max-width: 375px;
   margin: 0 auto;
   background: #CDCDCD;
+}
+
+.home-container {
+  display: flex;
+ // align-items: center;
+  //justify-content: center;
+  background-color: #fff;
+
+  .profile-container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  
 }

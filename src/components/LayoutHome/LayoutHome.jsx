@@ -8,13 +8,27 @@ import { Settings } from "../../components/LayoutHome/Settings/Settings";
 import { Calendar } from "../../components/LayoutHome/Calendar/Calendar";
 import { Matches } from "../../components/LayoutHome/Matches/Matches";
 import { Switch, Route, Link } from "react-router-dom";
+import { SideMenu } from "../../components/SideMenu/SideMenu.jsx";
+import iconNotif from "../../assets/icons/icon-notificações.svg";
+import iconMatches from "../../assets/icons/icon-matches.svg";
+import iconCalendar from "../../assets/icons/icon-calendar.svg";
+import iconConfig from "../../assets/icons/icon-config.svg";
+import Notif from "../../assets/icons/Notificação.svg";
 
 const SideBar = () => (
-  <aside>
-    <Link to="/notifications">Notif</Link>
-    <Link to="/calendar">calendar</Link>
-    <Link to="/matches">matches</Link>
-    <Link to="/settings">config</Link>
+  <aside className="side-menu">
+    <Link to="/notifications">
+      <SideMenu src={iconNotif} notif={Notif} />
+    </Link>
+    <Link to="/calendar">
+      <SideMenu src={iconCalendar} notif={Notif} />
+    </Link>
+    <Link to="/matches">
+      <SideMenu src={iconMatches} notif={Notif} />
+    </Link>
+    <Link to="/settings">
+      <SideMenu src={iconConfig} notif={Notif} />
+    </Link>
   </aside>
 );
 

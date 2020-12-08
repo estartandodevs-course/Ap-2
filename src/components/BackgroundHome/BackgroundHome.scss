@@ -1,9 +1,9 @@
 @import '../../styles/variables.scss';
 
 .background-home {
-    //height: 100vh;
-    height: 725px;
-    max-height: 725px;
+    height: 100vh;
+    //height: 725px;
+    min-height: 725px;
     width: 81.07%;
     background: $dark-bottom-gradient;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
