@@ -1,21 +1,15 @@
 body {
   width: 375px;
-  height: auto;
-  // max-width: 375px;
   margin: 0 auto;
-  background: #CDCDCD;
+  background: #cdcdcd;
 }
 
-.home-container {
-  display: flex;
- // align-items: center;
-  //justify-content: center;
-  background-color: #fff;
-
-  .profile-container {
-      display: flex;
-      flex-direction: column;
+.home-content {
+  .home-container {
+    display: flex;
+    // align-items: center;
+    //justify-content: center;
+    background-color: #fff;
+    min-height: 725px;
   }
-
-  
 }

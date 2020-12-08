@@ -1,28 +1,27 @@
 import React, { useState } from "react";
 import "./SideMenu.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-export function SideMenu({ src, notif }) {
+export function SideMenu({ src, notif, to }) {
   const [isClicked, setIsClicked] = useState(false);
 
   let classN = isClicked === true ? "menu-item active" : "menu-item";
 
   return (
     <div className="menu">
-      <button
+      <NavLink
         onClick={() => {
           setIsClicked(true);
         }}
-        onBlur={() => {
-          setIsClicked(false);
-        }}
-        className={classN}
+        className="menu-item"
+        to={to}
+        activeClassName="active"
       >
         <img src={src} alt="opção de Notificações" />
         <span className="notification">
           <img src={notif} alt="notificação" />
         </span>
-      </button>
+      </NavLink>
       <hr className="divisor" />
     </div>
   );

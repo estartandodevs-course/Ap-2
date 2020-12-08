@@ -2,12 +2,11 @@ import ImagemPerfilMenor from "../../components/ImagemPerfilMenor/ImagemPerfilMe
 import { Button } from "../../components/Button/Button";
 import Typography from "../Typography/Typography";
 import "./LayoutHome.scss";
-import { NavBar } from "./NavBar";
 import { Notifications } from "../../components/LayoutHome/Notifications/Notifications";
 import { Settings } from "../../components/LayoutHome/Settings/Settings";
 import { Calendar } from "../../components/LayoutHome/Calendar/Calendar";
 import { Matches } from "../../components/LayoutHome/Matches/Matches";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { SideMenu } from "../../components/SideMenu/SideMenu.jsx";
 import iconNotif from "../../assets/icons/icon-notificações.svg";
 import iconMatches from "../../assets/icons/icon-matches.svg";
@@ -17,18 +16,10 @@ import Notif from "../../assets/icons/Notificação.svg";
 
 const SideBar = () => (
   <aside className="side-menu">
-    <Link to="/notifications">
-      <SideMenu src={iconNotif} notif={Notif} />
-    </Link>
-    <Link to="/calendar">
-      <SideMenu src={iconCalendar} notif={Notif} />
-    </Link>
-    <Link to="/matches">
-      <SideMenu src={iconMatches} notif={Notif} />
-    </Link>
-    <Link to="/settings">
-      <SideMenu src={iconConfig} notif={Notif} />
-    </Link>
+    <SideMenu src={iconNotif} notif={Notif} to="/notifications" />
+    <SideMenu src={iconCalendar} notif={Notif} to="/calendar" />
+    <SideMenu src={iconMatches} notif={Notif} to="/matches" />
+    <SideMenu src={iconConfig} notif={Notif} to="/settings" />
   </aside>
 );
 
@@ -50,29 +41,29 @@ const Header = ({ onClick }) => (
         </Button>
       </div>
     </div>
-
     <hr />
   </header>
 );
 
-const Routes = () => (
-  <Switch>
-    <Route path="/notifications" component={Notifications} />
-    <Route path="/calendar" component={Calendar} />
-    <Route path="/matches" component={Matches} />
-    <Route path="/settings" component={Settings} />
-  </Switch>
-);
+const Routes = () => {
+  return (
+    <Switch>
+      <Route path="/notifications" component={Notifications} />
+      <Route path="/calendar" component={Calendar} />
+      <Route path="/matches" component={Matches} />
+      <Route path="/settings" component={Settings} />
+    </Switch>
+  );
+};
 
 export const LayoutHome = ({ onClick }) => (
-  <div className="layout-container">
-    <div className="layout-content">
-      <div className="layout-header-content">
-        <Header onClick={onClick} />
-        <Routes />
+    <div className="layout-container">
+      <div className="layout-content">
+        <div className="layout-header-content">
+          <Header onClick={onClick} />
+          <Routes />
+        </div>
+        <SideBar />
       </div>
-      <SideBar />
     </div>
-    <NavBar />
-  </div>
 );
