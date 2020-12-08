@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import "../../styles/fonts.scss";
+
 .containerNotificacao{
   width:auto;
   height: auto;
@@ -38,6 +40,34 @@
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 120%;
+    letter-spacing: 0.02em;
+  }
+}
+
+.container-matches {
+  display:flex;
+  width: 256px;
+  height: 50px;
+  flex-direction: row;
+  align-items: center;
+  background-image: url("../../assets/icons/Chat.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin-top: 40px;
+  
+  .image{
+    padding: 0 7.72px 0 12.17px;
+  }
+
+  .text{
+    margin: 0 24px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 21.6px;
     letter-spacing: 0.02em;
   }
 }
