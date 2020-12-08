@@ -14,6 +14,7 @@
 .title{
     font-size: 20px;
     line-height: 24px;
+    text-align: center;
 }
 
 .label{
@@ -34,4 +35,15 @@
     line-height: 16.8px;
     letter-spacing: 0.02em;
     color: #000000;
+}
+
+.textSettings{
+    font-family: "Inter";
+    font-weight: 1;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #FBFBFB;
+    padding-bottom: 43px;
 }

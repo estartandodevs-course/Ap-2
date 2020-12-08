@@ -7,15 +7,17 @@ import "./Calendar.scss";
 export const Calendar = () => (
   <div className="calendar">
     <Typography type="title">Agenda</Typography>
-    <ContainerCard
-      image={imgContainerAgenda1}
-      text="Encontro com Maria!"
-      className="containerAgenda"
-    />
-    <ContainerCard
-      image={imgContainerAgenda2}
-      text="Encontro com Julia!"
-      className="containerAgenda"
-    />
+    <div className="calendar-content">
+      <ContainerCard
+        image={imgContainerAgenda1}
+        text="Encontro com Maria!"
+        className="containerAgenda"
+      />
+      <ContainerCard
+        image={imgContainerAgenda2}
+        text="Encontro com Julia!"
+        className="containerAgenda"
+      />
+    </div>
   </div>
 );
