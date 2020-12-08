@@ -12,27 +12,27 @@ export const Settings = () => (
     <Typography type="title">Configurações</Typography>
     <div className="settings-content">
       <Typography type="textSettings">
-        <img src={account} />
+        <img src={account} alt="Conta" />
         Conta
       </Typography>
       <Typography type="textSettings">
-        <img src={notification} />
+        <img src={notification} alt="Notificações" />
         Notificações
       </Typography>
       <Typography type="textSettings">
-        <img src={privacy} />
+        <img src={privacy} alt="Privacidade" />
         Privacidade
       </Typography>
       <Typography type="textSettings">
-        <img src={location} />
+        <img src={location} alt="Localização" />
         Localização
       </Typography>
       <Typography type="textSettings">
-        <img src={help} />
+        <img src={help} alt="Ajuda" />
         Ajuda
       </Typography>
       <Typography type="textSettings">
-        <img src={about} />
+        <img src={about} alt="Sobre" />
         Sobre
       </Typography>
     </div>

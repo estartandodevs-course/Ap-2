@@ -29,3 +29,11 @@
     color: $cinza-4;
 }
 
+.btn-arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 22px;
+  margin-right: 22px;
+  background: #FBFBFB;
+}
