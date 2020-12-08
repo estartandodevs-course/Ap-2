@@ -1,28 +1,15 @@
 body {
-    width: 375px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: gray;
+  width: 375px;
+  margin: 0 auto;
+  background: #cdcdcd;
 }
 
-.home-container {
-  display: flex;
- // align-items: center;
-  //justify-content: center;
-  background-color: #fff;
-
-  .profile-container {
-      display: flex;
-      flex-direction: column;
-  }
-
-  .side-menu{
-      margin-top:46px;
-      list-style: none;
-      width: 71px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
+.home-content {
+  .home-container {
+    display: flex;
+    // align-items: center;
+    //justify-content: center;
+    background-color: #fff;
+    min-height: 725px;
   }
 }

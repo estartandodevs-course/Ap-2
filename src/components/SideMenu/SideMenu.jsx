@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
-import './SideMenu.scss';
-import { Link } from 'react-router-dom';
+import React from "react";
+import "./SideMenu.scss";
+import { NavLink } from "react-router-dom";
 
-export function SideMenu({ src, notif}){
-    
-    const [isClicked,setIsClicked] = useState(false);
+export function SideMenu({ src, notif, to }) {
+  //const [isClicked, setIsClicked] = useState(false);
 
-    let classN = isClicked  === true ? "menu-item active"  : "menu-item"
+ // let classN = isClicked === true ? "menu-item active" : "menu-item";
 
-    return(
-        <div className="menu">
-            <Link
-                onClick={()=>{setIsClicked(true)}}
-                onBlur={()=>{setIsClicked(false)}}
-                className={classN} >
-                <img
-                    src={src}
-                    alt="opção de Notificações" />
-                <span className="notification">
-                    <img src={notif} alt="notificação" />
-                </span>
-            </Link>
-            <hr className="divisor"/>
-        </div>
-    ) 
+  return (
+    <div className="menu">
+      <NavLink
+      //  onClick={() => {
+      //    setIsClicked(true);
+     //   }}
+        className="menu-item"
+        to={to}
+        activeClassName="active"
+      >
+        <img src={src} alt="opção de Notificações" />
+        <span className="notification">
+          <img src={notif} alt="notificação" />
+        </span>
+      </NavLink>
+      <hr className="divisor" />
+    </div>
+  );
 }

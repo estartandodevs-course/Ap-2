@@ -1,26 +1,27 @@
-.menu{
-    position: relative;
-    .divisor{
-        margin-bottom: 26px;
-        margin-top: 16px;
-        width: 48px;
-        color: rgba(153,153,153,1);
-    }
+.menu {
+  position: relative;
+  .divisor {
+    margin-bottom: 26px;
+    margin-top: 16px;
+    width: 48px;
+    color: rgba(153, 153, 153, 1);
+  }
 
-    .menu-item.active{
-        filter:invert(7%) sepia(25%) saturate(471%) hue-rotate(356deg) brightness(91%) contrast(135%);
-    }
-    .notification{
-        /* relative 
+  .active > img {
+    filter: invert(12%) sepia(83%) saturate(5841%) hue-rotate(244deg)
+      brightness(87%) contrast(153%);
+  }
+  //.notification {
+    /* relative 
         position: relative;
         top: -10px;
         right: 3px;
         */
 
-        /* absolute 
+    /* absolute 
         position: absolute;
         top: -10px;
         right: 3px;
         */
-    }
+ // }
 }
