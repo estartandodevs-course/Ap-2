@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 import "./SideMenu.scss";
 import { NavLink } from "react-router-dom";
 
 export function SideMenu({ src, notif, to }) {
-  const [isClicked, setIsClicked] = useState(false);
+  //const [isClicked, setIsClicked] = useState(false);
 
-  let classN = isClicked === true ? "menu-item active" : "menu-item";
+ // let classN = isClicked === true ? "menu-item active" : "menu-item";
 
   return (
     <div className="menu">
       <NavLink
-        onClick={() => {
-          setIsClicked(true);
-        }}
+      //  onClick={() => {
+      //    setIsClicked(true);
+     //   }}
         className="menu-item"
         to={to}
         activeClassName="active"
