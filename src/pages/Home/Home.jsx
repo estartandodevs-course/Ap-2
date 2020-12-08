@@ -5,7 +5,16 @@ import { Button } from "../../components/Button/Button";
 import { Link, useHistory } from "react-router-dom";
 import HomeNavbar from "../../components/HomeNavbar/HomeNavbar.jsx";
 import "./Home.scss";
-
+import ContainerCard from "../../components/ContainerCard/containerCard";
+import imgContainerPic from "../../assets/images/containerImage.svg";
+import imgContainerAgenda1 from "../../assets/icons/IconeAgenda1.svg";
+import imgContainerAgenda2 from "../../assets/icons/IconeAgenda2.svg";
+import { SideMenu } from "../../components/SideMenu/SideMenu.jsx";
+import iconNotif from '../../assets/icons/icon-notificações.svg';
+import iconMatches from '../../assets/icons/icon-matches.svg';
+import iconCalendar from '../../assets/icons/icon-calendar.svg';
+import iconConfig from '../../assets/icons/icon-config.svg';
+import Notif from '../../assets/icons/Notificação.svg';
 
 export function Home() {
   const history = useHistory();
@@ -16,24 +25,36 @@ export function Home() {
 
   return (
     <>
-      <div className="home-container">
-        <BackgroundHome>
-          <div className="profile-container">
-            <ImagemPerfilMenor />
-            <Button
-              width="136px"
-              background="#184177"
-              height="32px"
-              borderRadius="10px"
-              className="btn btn-profile btn-font1 btn-text"
-              onClick={onClick}
-            >
-              Editar Perfil
+    <div className="home-container">
+      <BackgroundHome>
+        <div className="profile-container">
+          <ImagemPerfilMenor />
+          <Button
+            width="136px"
+            background="#184177"
+            height="32px"
+            borderRadius="10px"
+            className="btn btn-profile btn-font1 btn-text"
+            onClick={onClick}
+          >
+            Editar Perfil
           </Button>
-          </div>
-        </BackgroundHome>
-      </div>
-      <HomeNavbar>
+        </div>
+        <ContainerCard image={imgContainerPic} text="Maria também gostaria de conversar com você" className="containerNotificacao"/>
+        <ContainerCard image={imgContainerPic} text="Maria também gostaria de conversar com você" className="containerNotificacao"/>
+        <ContainerCard image={imgContainerPic} text="Maria também gostaria de conversar com você" className="containerNotificacao"/>
+        <ContainerCard image={imgContainerAgenda1} text="Encontro com Maria!" className="containerAgenda"/>
+        <ContainerCard image={imgContainerAgenda2} text="Encontro com Julia!" className="containerAgenda"/>
+      </BackgroundHome>
+      <side className="side-menu">
+        <SideMenu src={iconNotif} notif={Notif} />
+        <SideMenu src={iconCalendar} notif={Notif} />
+        <SideMenu src={iconMatches} notif={Notif} />
+        <SideMenu src={iconConfig} notif={Notif} />
+      </side>
+      
+    </div>
+     <HomeNavbar>
         <Link to="./search">
           <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21.1251 2.23504V5.47726L17.9564 2.82916V2.23504H21.1251ZM25.2391 11.0733C25.1335 11.2148 24.9803 11.2884 24.8219 11.2884C24.7057 11.2884 24.5948 11.2487 24.4945 11.1695L23.7657 10.5584V25.4342C23.7657 25.7454 23.528 26 23.2375 26H15.844V15.815H9.50668V26H2.11314C1.82268 26 1.58503 25.7454 1.58503 25.4342V10.5584L0.856237 11.1695C0.623868 11.3619 0.291159 11.3166 0.111602 11.0733C-0.0679559 10.8244 -0.0257071 10.4679 0.20138 10.2755L12.3479 0.118825C12.5433 -0.0396083 12.8074 -0.0396083 13.0028 0.118825L25.1493 10.2755C25.3764 10.4679 25.4186 10.8244 25.2391 11.0733Z" fill="#2767BC" />
@@ -53,6 +74,6 @@ export function Home() {
           </svg>
         </Link>
       </HomeNavbar>
-    </>
+      </>
   );
 }
