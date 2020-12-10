@@ -71,3 +71,16 @@
     letter-spacing: 0.02em;
   }
 }
+
+.login-content {
+  background: #ffffff;
+  width: 335px;
+  height: 278px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+
+  
+}
