@@ -10,7 +10,7 @@ function Typography(props){
         title : <h1 className="typography-base title"> {children} </h1>,
         smallText: <p className="smallText">{children}</p>,
         textSettings: <p className="textSettings">{children}</p>,
-        evaluationText: <span className="evaluationText" >{children} <a href="">Avalie!</a></span>
+        evaluationText: <span className="evaluationText" >{children} <a href="/">Avalie!</a></span>
     }
     return (
         TYPES[type]
