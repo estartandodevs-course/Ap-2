@@ -10,6 +10,7 @@ export function InputText({
   classInput,
   marginBottom,
   width,
+  type,
 }) {
   const [value, setValue] = useState("");
   const [focused, setFocused] = useState(false);
@@ -28,7 +29,7 @@ export function InputText({
       style={{ marginBottom: marginBottom }}
     >
       <input
-        type="text"
+        type={ type }
         maxLength="250"
         style={{
           borderColor: colorInput,
