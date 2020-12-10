@@ -24,3 +24,22 @@
     margin-right: 24px;
   }
 }
+
+.flex-start{
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+
+  h1{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left:4.54px;
+    height: auto;
+  }
+
+  img{
+    width: 22px;
+    margin-right: 0;
+  }
+}
