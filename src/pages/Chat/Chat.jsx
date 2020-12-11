@@ -1,11 +1,8 @@
 import React from 'react';
 import { NavBar } from '../../components/LayoutHome/NavBar/NavBar';
 
-export function RegisterFourthStep(){
+export function Chat(){
     return (
-        <>
-        <div>TO DO STEP 4</div>
-        </>
-
+        <NavBar statusSearch={false} statusHome={false} statusChat={true} />
     )
 }
