@@ -11,7 +11,7 @@ export default function UserRank(Rank) {
         }
         return element;
     })
-    const [rank, setRank] = useState(NewRankImages);
+    const rank = useState(NewRankImages);
 
     const RankImg = rank.map(element => {
         return (
