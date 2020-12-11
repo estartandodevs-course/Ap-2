@@ -1,6 +1,9 @@
+
 import React from "react";
 import { Button } from "../../components/Button/Button";
+import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 import UserRank from "../../components/ClassificaçaoUser/UserRank.jsx";
+
 export function SearchProfile() {
   return (
     <div>
@@ -14,6 +17,8 @@ export function SearchProfile() {
         Mostrar todos perfis
       </Button>
       <UserRank Rank={4}></UserRank>
+      <NavBar statusSearch={true} statusHome={false} statusChat={false} />
     </div>
   );
 }
+
