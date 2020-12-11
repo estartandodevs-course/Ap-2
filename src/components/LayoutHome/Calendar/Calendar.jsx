@@ -5,6 +5,7 @@ import { months } from "../../../mocks/Months";
 import previous from "../../../assets/icons/arrow_back_ios_24px.png";
 import next from "../../../assets/icons/arrow_forward_ios_24px.png";
 import { Button } from "../../Button/Button";
+import ContainerCard from "../../ContainerCard/containerCard";
 
 export function Calendar() {
   // const d = new Date();
@@ -18,7 +19,7 @@ export function Calendar() {
   return (
     <div className="calendar">
       <Typography type="title">Agenda</Typography>
-      <div className="calendar-content">
+      <ContainerCard width="256px" height="221px" className="calendar-content">
         {showCurrentMonth.map((option) => {
           return (
             <div className="months" key={option.id}>
@@ -59,7 +60,7 @@ export function Calendar() {
             </div>
           );
         })}
-      </div>
+      </ContainerCard>
     </div>
   );
 }

@@ -19,53 +19,57 @@ export function Profile() {
     <div className="profile-container">
       {showCurrentProfile.map((option) => {
         return (
-          <ContainerCard
-            width="335px"
-            height="140px"
-            className="container-profile"
-            text={`Gostaria de conversar com ${option.name}?`}
-          >
-            <div className="btn-container" key={option.id}>
-              <Button
-                width="48px"
-                height="48px"
-                background="#A73027"
-                borderRadius="50%"
-                className="btn"
-                onClick={() =>
-                  currentProfile === 2
-                    ? history.push("/search-profile")
-                    : setProfile(option.id + 1)
-                }
-              >
-                <span>&#x2716;</span>
-              </Button>
-              <Button
-                width="99px"
-                height="48px"
-                background="#184177"
-                borderRadius="10px"
-                className="btn btn-font2 btn-text btn-line"
-                onClick={() => history.push("view-full-profile")}
-              >
-                Ver perfil completo
-              </Button>
-              <Button
-                width="48px"
-                height="48px"
-                background="#37923B"
-                borderRadius="50%"
-                className="btn"
-                onClick={() =>
-                  currentProfile === 2
-                    ? history.push("/search-profile")
-                    : setProfile(option.id + 1)
-                }
-              >
-                <img src={check} alt="OK"></img>
-              </Button>
-            </div>
-          </ContainerCard>
+          <>
+            <img src={option.img} alt="Imagem Perfil"></img>
+            <div>{option.preferences}</div>
+            <ContainerCard
+              width="335px"
+              height="140px"
+              className="container-profile"
+              text={`Gostaria de conversar com ${option.name}?`}
+            >
+              <div className="btn-container" key={option.id}>
+                <Button
+                  width="48px"
+                  height="48px"
+                  background="#A73027"
+                  borderRadius="50%"
+                  className="btn"
+                  onClick={() =>
+                    currentProfile === 2
+                      ? history.push("/search-profile")
+                      : setProfile(option.id + 1)
+                  }
+                >
+                  <span>&#x2716;</span>
+                </Button>
+                <Button
+                  width="99px"
+                  height="48px"
+                  background="#184177"
+                  borderRadius="10px"
+                  className="btn btn-font2 btn-text btn-line"
+                  onClick={() => history.push("view-full-profile")}
+                >
+                  Ver perfil completo
+                </Button>
+                <Button
+                  width="48px"
+                  height="48px"
+                  background="#37923B"
+                  borderRadius="50%"
+                  className="btn"
+                  onClick={() =>
+                    currentProfile === 2
+                      ? history.push("/search-profile")
+                      : setProfile(option.id + 1)
+                  }
+                >
+                  <img src={check} alt="OK"></img>
+                </Button>
+              </div>
+            </ContainerCard>
+          </>
         );
       })}
       <NavBar statusSearch={true} statusHome={false} statusChat={false} />
