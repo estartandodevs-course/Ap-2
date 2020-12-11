@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavBar } from '../../components/LayoutHome/NavBar/NavBar';
 
 export function RegisterFourthStep(){
     return (
