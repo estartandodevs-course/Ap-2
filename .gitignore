@@ -25,4 +25,7 @@ yarn-error.log*
 # Cache eslint opcional
 .eslintcache
 
+# ambient variables
+.env
+
 debug.log
