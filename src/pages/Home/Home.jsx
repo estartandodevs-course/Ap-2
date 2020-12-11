@@ -13,15 +13,16 @@ export function Home() {
   }
 
   return (
-    <Router>
-      <div className="home-content">
-        <div className="home-container">
-          <BackgroundHome>
-            <LayoutHome onClick={onClick} />
-          </BackgroundHome>
-        </div>
-        <NavBar />
-      </div>
-    </Router>
+    <div className="home-content">
+      <Router>
+          <div className="home-container">
+            <BackgroundHome>
+              <LayoutHome onClick={onClick} />
+            </BackgroundHome>
+          </div>
+      </Router>
+      <NavBar statusSearch={false} statusHome={true} statusChat={false}/>
+    </div>
+      
   );
 }
