@@ -5,6 +5,7 @@ import { profiles } from "../../mocks/Profiles";
 import React, { useState } from "react";
 import check from "../../assets/icons/check-symbol.png";
 import { useHistory } from "react-router-dom";
+import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 
 export function Profile() {
   const [currentProfile, setProfile] = useState(1);
@@ -67,6 +68,7 @@ export function Profile() {
           </ContainerCard>
         );
       })}
+      <NavBar statusSearch={true} statusHome={false} statusChat={false} />
     </div>
   );
 }
