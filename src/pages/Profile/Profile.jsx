@@ -4,9 +4,11 @@ import "./Profile.scss";
 import { profiles } from "../../mocks/Profiles";
 import React, { useState } from "react";
 import check from "../../assets/icons/check-symbol.png";
+import { useHistory } from "react-router-dom";
 
 export function Profile() {
   const [currentProfile, setProfile] = useState(1);
+  const history = useHistory();
 
   let showCurrentProfile = profiles.filter((option) => {
     return option.id === currentProfile;
@@ -29,7 +31,11 @@ export function Profile() {
                 background="#A73027"
                 borderRadius="50%"
                 className="btn"
-                onClick={() => currentProfile === 2 ? setProfile(1) : setProfile(option.id + 1)}
+                onClick={() =>
+                  currentProfile === 2
+                    ? history.push("/search-profile")
+                    : setProfile(option.id + 1)
+                }
               >
                 <span>&#x2716;</span>
               </Button>
@@ -39,6 +45,7 @@ export function Profile() {
                 background="#184177"
                 borderRadius="10px"
                 className="btn btn-font2 btn-text btn-line"
+                onClick={() => history.push("view-full-profile")}
               >
                 Ver perfil completo
               </Button>
@@ -48,7 +55,11 @@ export function Profile() {
                 background="#37923B"
                 borderRadius="50%"
                 className="btn"
-                onClick={() => currentProfile === 2 ? setProfile(1) : setProfile(option.id + 1)}
+                onClick={() =>
+                  currentProfile === 2
+                    ? history.push("/search-profile")
+                    : setProfile(option.id + 1)
+                }
               >
                 <img src={check} alt="OK"></img>
               </Button>
