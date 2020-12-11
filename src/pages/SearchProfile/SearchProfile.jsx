@@ -1,8 +1,5 @@
 import React from "react";
 import { Button } from "../../components/Button/Button";
-import Preferencias from "../../components/Preferencias/Preferencias";
-import {vetorImage, vetorImage2} from "../../mocks/imagesPreferences";
-
 export function SearchProfile() {
   return (
     <div>
@@ -15,8 +12,6 @@ export function SearchProfile() {
       >
         Mostrar todos perfis
       </Button>
-      <Preferencias vetorImage={vetorImage}/>
-      <Preferencias vetorImage={vetorImage2}/>
     </div>
   );
 }
