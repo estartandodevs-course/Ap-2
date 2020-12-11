@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "../../components/Button/Button";
+import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
+
 export function SearchProfile() {
   return (
     <div>
@@ -12,6 +14,8 @@ export function SearchProfile() {
       >
         Mostrar todos perfis
       </Button>
+
+      <NavBar statusSearch={true} statusHome={false} statusChat={false} />
     </div>
   );
 }

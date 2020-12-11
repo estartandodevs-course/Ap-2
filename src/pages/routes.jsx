@@ -7,6 +7,7 @@ import { RegisterSecondStep } from "./RegisterSecondStep/RegisterSecondStep";
 import { RegisterThirdStep } from "./RegisterThirdStep/RegisterThirdStep";
 import { SearchProfile } from "./SearchProfile/SearchProfile";
 import { Login } from "./Login/Login";
+import { Chat } from "./Chat/Chat";
 
 export function Routes() {
   return (
@@ -17,6 +18,7 @@ export function Routes() {
       <Route path="/register-fourth-step" component={RegisterFourthStep} />
       <Route path="/home" component={Home} />
       <Route path="/search-profile" component={SearchProfile} />
+      <Route path="/chat" component={Chat} />
       <Route path="/login" component={Login} />
       <Route component={() => <div>ERROR 404</div>} />
     </Switch>
