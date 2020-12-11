@@ -7,6 +7,7 @@ import { RegisterSecondStep } from "./RegisterSecondStep/RegisterSecondStep";
 import { RegisterThirdStep } from "./RegisterThirdStep/RegisterThirdStep";
 import { SearchProfile } from "./SearchProfile/SearchProfile";
 import { Login } from "./Login/Login";
+import { Profile } from "./Profile/Profile";
 
 export function Routes() {
   return (
@@ -18,6 +19,7 @@ export function Routes() {
       <Route path="/home" component={Home} />
       <Route path="/search-profile" component={SearchProfile} />
       <Route path="/login" component={Login} />
+      <Route path="/profile" component={Profile} />
       <Route component={() => <div>ERROR 404</div>} />
     </Switch>
   );
