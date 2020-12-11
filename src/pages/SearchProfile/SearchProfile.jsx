@@ -13,7 +13,7 @@ export function SearchProfile() {
       >
         Mostrar todos perfis
       </Button>
-      <UserRank Rank='4'></UserRank>
+      <UserRank Rank={4}></UserRank>
     </div>
   );
 }

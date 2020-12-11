@@ -1,26 +1,20 @@
-import TrueKeyImg from '../../assets/icons/TrueKey.png';
 import FalseKeyImg from '../../assets/icons/FalseKey.png';
-
+import TrueKeyImg from '../../assets/icons/TrueKey.png';
 
 export const RankImages = [
     {
-    img: FalseKeyImg,
-    isRanked: false,
+        img: FalseKeyImg,
     },
     {
-    img: FalseKeyImg,
-    isRanked: false,
+        img: FalseKeyImg,
     },
     {
-    img: FalseKeyImg,
-    isRanked: false,
+        img: FalseKeyImg,
     },
     {
-    img: FalseKeyImg,
-    isRanked: false,
+        img: FalseKeyImg,
     },
     {
-    img: FalseKeyImg,
-    isRanked: false,
+        img: FalseKeyImg,
     },
 ]
