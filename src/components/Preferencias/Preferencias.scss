@@ -1,0 +1,15 @@
+.imagensPreferencias{
+  width:271px;
+  height: 80px;
+  display: flex;
+  justify-content:space-between;
+  #GG0, #GG3{
+    align-self: flex-start;
+    padding-top: 10px;
+    //background-color: black;
+  }
+  #GG1, #GG2{
+    align-self: flex-end;
+    //background-color: black;
+  }
+}
