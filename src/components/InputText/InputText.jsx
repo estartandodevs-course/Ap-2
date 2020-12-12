@@ -11,8 +11,10 @@ export function InputText({
   marginBottom,
   width,
   type,
+  value,
+  setValue,
 }) {
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
   const [focused, setFocused] = useState(false);
 
   function onChange(event) {
