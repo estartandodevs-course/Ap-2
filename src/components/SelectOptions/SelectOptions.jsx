@@ -1,6 +1,6 @@
 import "./SelectOptions.scss";
 import Select, { components } from "react-select";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 
 export function SelectOptions(props) {
   const { content, options = [] } = props;
@@ -15,7 +15,8 @@ export function SelectOptions(props) {
     control: (base, state) => ({
       ...base,
       width: "100%",
-      height: "40px",
+      height: "100%",
+      minHeight: "40px",
       borderRadius: "5px",
       fontSize: "14px",
       lineHeight: "21px",
@@ -40,11 +41,11 @@ export function SelectOptions(props) {
     valueContainer: (base) => ({
       ...base,
       justifyContent: "center",
-      cursor: "pointer"
+      cursor: "pointer",
     }),
     singleValue: (base) => ({
       ...base,
-      color: "#FBFBFB",
+      color: isSelected ? "#FBFBFB" : "#999999",
     }),
     indicatorsContainer: (base) => ({
       ...base,
@@ -57,11 +58,7 @@ export function SelectOptions(props) {
   };
 
   const Option = (props) => {
-    return (
-      <Fragment>
-        <components.Option {...props}>{props.children}</components.Option>
-      </Fragment>
-    );
+    return <components.Option {...props}>{props.children}</components.Option>;
   };
 
   function onChange() {
@@ -87,7 +84,8 @@ export function SelectOptions(props) {
           components={{ Option }}
           styles={customStyles}
           classNamePrefix="select"
-          defaultValue={options[0]}
+          // defaultValue={options[0]}
+          placeholder="Selecione"
         />
       ) : null}
     </div>
