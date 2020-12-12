@@ -1,6 +1,4 @@
 import React from 'react';
-//import { StepHeader } from '../../components/StepHeader/StepHeader';
-//import filter from "../../assets/icons/filter.svg";
 
 export function RegisterFourthStep(){
     return (
@@ -9,5 +7,3 @@ export function RegisterFourthStep(){
         </>
     )
 }
-
-// <StepHeader content="Filtros" src={filter} alt="Steps" className="flex-start"/>

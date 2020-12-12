@@ -9,3 +9,9 @@
     box-shadow: $box-shadow1;
     border-radius: 0 0 200px 60%/50px;
 }
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
