@@ -6,7 +6,7 @@ import { Notifications } from "../../components/LayoutHome/Notifications/Notific
 import { Settings } from "../../components/LayoutHome/Settings/Settings";
 import { Calendar } from "../../components/LayoutHome/Calendar/Calendar";
 import { Matches } from "../../components/LayoutHome/Matches/Matches";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import { SideMenu } from "../../components/SideMenu/SideMenu.jsx";
 import iconNotif from "../../assets/icons/icon-notificações.svg";
 import iconMatches from "../../assets/icons/icon-matches.svg";
@@ -16,10 +16,10 @@ import Notif from "../../assets/icons/Notificação.svg";
 
 const SideBar = () => (
   <aside className="side-menu">
-    <SideMenu src={iconNotif} notif={Notif} to="/notifications" />
-    <SideMenu src={iconCalendar} notif={Notif} to="/calendar" />
-    <SideMenu src={iconMatches} notif={Notif} to="/matches" />
-    <SideMenu src={iconConfig} notif={Notif} to="/settings" />
+    <SideMenu src={iconNotif} notif={Notif} to="/home/notifications" />
+    <SideMenu src={iconCalendar} notif={Notif} to="/home/calendar" />
+    <SideMenu src={iconMatches} notif={Notif} to="/home/matches" />
+    <SideMenu src={iconConfig} notif={Notif} to="/home/settings" />
   </aside>
 );
 
@@ -48,22 +48,23 @@ const Header = ({ onClick }) => (
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/notifications" component={Notifications} />
-      <Route path="/calendar" component={Calendar} />
-      <Route path="/matches" component={Matches} />
-      <Route path="/settings" component={Settings} />
+      <Route path="/home/notifications" component={Notifications} />
+      <Route path="/home/calendar" component={Calendar} />
+      <Route path="/home/matches" component={Matches} />
+      <Route path="/home/settings" component={Settings} />
+      <Redirect to="/home/notifications" />
     </Switch>
   );
 };
 
 export const LayoutHome = ({ onClick }) => (
     <div className="layout-container">
-      <div className="layout-content">
+      {/* <div className="layout-content"> */}
         <div className="layout-header-content">
           <Header onClick={onClick} />
           <Routes />
         </div>
         <SideBar />
-      </div>
+      {/* </div> */}
     </div>
 );
