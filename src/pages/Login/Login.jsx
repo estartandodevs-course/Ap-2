@@ -33,7 +33,7 @@ export function Login() {
           <div className="input-container">
             <img src={emailIcon} alt="email"></img>
             <InputText
-              type='text'
+              type="text"
               label="Email"
               isRequired={true}
               marginBottom="40px"

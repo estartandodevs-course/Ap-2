@@ -40,6 +40,7 @@ export function SelectOptions(props) {
     valueContainer: (base) => ({
       ...base,
       justifyContent: "center",
+      cursor: "pointer"
     }),
     singleValue: (base) => ({
       ...base,
