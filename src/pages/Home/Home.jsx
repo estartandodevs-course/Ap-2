@@ -16,9 +16,7 @@ export function Home() {
     <div className="home-content">
       <Router>
           <div className="home-container">
-            <BackgroundHome>
               <LayoutHome onClick={onClick} />
-            </BackgroundHome>
           </div>
       </Router>
       <NavBar statusSearch={false} statusHome={true} statusChat={false}/>
