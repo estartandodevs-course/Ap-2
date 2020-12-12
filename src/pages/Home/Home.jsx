@@ -1,5 +1,4 @@
 import React from "react";
-import BackgroundHome from "../../components/BackgroundHome/BackgroundHome.jsx";
 import { useHistory, BrowserRouter as Router } from "react-router-dom";
 import "./Home.scss";
 import { LayoutHome } from "../../components/LayoutHome/LayoutHome.jsx";
