@@ -1,23 +1,23 @@
 .menu {
-	position: relative;
-	.divisor {
-		margin-bottom: 26px;
-		margin-top: 16px;
-		width: 48px;
-		color: rgba(153, 153, 153, 1);
-	}
+  position: relative;
+  .divisor {
+    margin-bottom: 26px;
+    margin-top: 16px;
+    width: 48px;
+    color: rgba(153, 153, 153, 1);
+  }
 
-	a {
+  a {
     position: relative;
-    
-    .active > img {
-		  filter: invert(12%) sepia(83%) saturate(5841%) hue-rotate(244deg) brightness(87%) contrast(153%);
-	  }
 
-		.notification {
-			position: absolute;
-			right: -6px;
-			top: -20px;
-		}
-	}
+    .notification {
+      position: absolute;
+      right: -6px;
+      top: -20px;
+    }
+  }
+  .active > img {
+    filter: invert(12%) sepia(83%) saturate(5841%) hue-rotate(244deg)
+      brightness(87%) contrast(153%);
+  }
 }

@@ -14,4 +14,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    border-radius: 0 0 300px 50%/40px;
+
+    @media (max-width: 450px) {
+        border-radius: 0 0 200px 60%/50px;
+    }
 }

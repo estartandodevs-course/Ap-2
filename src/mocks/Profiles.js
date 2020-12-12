@@ -8,7 +8,7 @@ export const profiles = [
     id: 1,
     name: "Isabel",
     img: perfil1,
-    age: "18 - anos",
+    age: "18 anos",
     ocupation: "Estudante - UFMG",
     preferences: <Preferencias vetorImage={vetorImage} />,
     bio:
@@ -18,7 +18,7 @@ export const profiles = [
     id: 2,
     name: "Marcos",
     img: perfil2,
-    age: "26 - anos",
+    age: "26 anos",
     ocupation: "Trainee - Unilever",
     preferences: <Preferencias vetorImage={vetorImage2} />,
     bio:

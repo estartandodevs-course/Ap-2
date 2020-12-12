@@ -11,6 +11,7 @@ import avaliacao from "../../assets/images/Avaliação.png";
 import { StepHeader } from "../../components/StepHeader/StepHeader";
 import filter from "../../assets/icons/filter.svg";
 import { RegisterHeader } from "../../components/HeaderStep1/HeaderStep1";
+import Typography from "../../components/Typography/Typography";
 
 export function Profile() {
   const [currentProfile, setProfile] = useState(1);
@@ -34,12 +35,30 @@ export function Profile() {
                   className="flex-start"
                 />
                 <img src={option.img} alt="Imagem Perfil"></img>
-                <img src={avaliacao} alt="Avaliação"></img>
-                <div>{option.preferences}</div>
+                <img
+                  src={avaliacao}
+                  alt="Avaliação"
+                  className="evaluation"
+                ></img>
+                <Typography type="bigTitle">
+                  {option.name} - {option.age}
+                </Typography>
+                <Typography type="bigTitle" className="ocupation">
+                  {option.ocupation}
+                </Typography>
+                <Typography type="textSettings" className="bio-content">
+                  {option.bio}
+                </Typography>
+                <div className="preferences">{option.preferences}</div>
               </RegisterHeader>
+
+              <Typography type="evaluationText">
+                {`Conhece ${option.name}?`}
+              </Typography>
+              
               <ContainerCard
-                width="335px"
-                height="140px"
+                width="100%"
+                height="100%"
                 className="container-profile"
                 text={`Gostaria de conversar com ${option.name}?`}
               >
