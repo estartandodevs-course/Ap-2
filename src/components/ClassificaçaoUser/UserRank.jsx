@@ -1,6 +1,7 @@
 //import { useState } from "react";
 import { RankImages } from "./RankObject.js";
 import TrueKeyImg from "../../assets/icons/TrueKey.png";
+import "./UserRank.scss";
 
 export default function UserRank(Rank) {
   let RankNumber = Object.values(Rank);
