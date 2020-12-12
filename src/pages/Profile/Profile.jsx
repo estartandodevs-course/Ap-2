@@ -7,11 +7,11 @@ import { useHistory } from "react-router-dom";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 import ThumbUp from "../../assets/icons/thumb_up_24px.svg";
 import ThumbDown from "../../assets/icons/thumb_down_24px.svg";
-import avaliacao from "../../assets/images/Avaliação.png";
 import { StepHeader } from "../../components/StepHeader/StepHeader";
 import filter from "../../assets/icons/filter.svg";
 import { RegisterHeader } from "../../components/HeaderStep1/HeaderStep1";
 import Typography from "../../components/Typography/Typography";
+import UserRank from "../../components/ClassificaçaoUser/UserRank";
 
 export function Profile() {
   const [currentProfile, setProfile] = useState(1);
@@ -35,11 +35,7 @@ export function Profile() {
                   className="flex-start"
                 />
                 <img src={option.img} alt="Imagem Perfil"></img>
-                <img
-                  src={avaliacao}
-                  alt="Avaliação"
-                  className="evaluation"
-                ></img>
+                <UserRank Rank={4}></UserRank>
                 <Typography type="bigTitle">
                   {option.name} - {option.age}
                 </Typography>
@@ -55,7 +51,7 @@ export function Profile() {
               <Typography type="evaluationText">
                 {`Conhece ${option.name}?`}
               </Typography>
-              
+
               <ContainerCard
                 width="100%"
                 height="100%"

@@ -12,7 +12,7 @@ export const profiles = [
     ocupation: "Estudante - UFMG",
     preferences: <Preferencias vetorImage={vetorImage} />,
     bio:
-      "Olá! Sou Isabel, estou me mudando do interior de MG para BH, para cursar Direito na UFMG. Quero conhecer outras estudantes da faculdade para dividir apto e a experiência de ser universitárias! 😊😁👩‍🎓👩‍🎓 ",
+      "Olá! Sou Isabel, estou me mudando do interior de MG para BH, para cursar Direito na UFMG. Quero conhecer outras estudantes da faculdade para dividir apto e a experiência de ser universitárias! 😊😁👩‍🎓👩‍🎓",
   },
   {
     id: 2,
