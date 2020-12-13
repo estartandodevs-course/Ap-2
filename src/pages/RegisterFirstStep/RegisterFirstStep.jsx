@@ -19,6 +19,7 @@ export function RegisterFirstStep() {
         <StepHeader content="Sobre você" src={step1} alt="Steps" />
         <ImagemPerfil />
         <InputText
+          type="text"
           colorInput="rgba(251,251,251,1)"
           colorLabel="rgba(255,255,255,1)"
           label="Nome"
@@ -45,6 +46,7 @@ export function RegisterFirstStep() {
           label="Empresa"
         />
         <InputText
+          type="text"
           colorInput="rgba(204,204,204,1)"
           colorLabel="rgba(39,103,188,1)"
           label="Escreva uma bio curta sobre você"
