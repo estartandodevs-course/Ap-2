@@ -1,0 +1,21 @@
+.full-profile {
+    width: 100%;
+    height: auto;
+    background: #F8F8F8;
+
+  .flex-start {
+    cursor: pointer;
+  }
+  .typography {
+    position: relative;
+    bottom: 20px;
+
+    @media (max-width: 320px) {
+      left: 25px;
+    }
+  }
+
+  .full-profile-content {
+      padding: 24px 19px 18px;
+  }
+}
