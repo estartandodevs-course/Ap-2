@@ -1,0 +1,63 @@
+.typography-base{
+    font-family: "Baloo Tamma 2";
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0.02em;
+    color: #FBFBFB;
+}
+
+.bigTitle{
+    font-size:24px;
+    line-height: 36px;
+}
+
+.title{
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.label{
+    font-family: "Inter";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #2767BC;
+}
+
+.smallText{
+    font-family: "Inter";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 0.02em;
+    color: #000000;
+}
+
+.textSettings{
+    font-family: "Inter";
+    font-weight: 1;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.02em;
+    color: #FBFBFB;
+    padding-bottom: 40px;
+}
+
+.evaluationText{
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    padding-bottom: 14px;
+
+    a{
+        font-family: inherit;
+        color: #2E76D7;
+    }
+}

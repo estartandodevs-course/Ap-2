@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.registerHeader {
+    background: linear-gradient(to bottom, $primary-1, $primary-2);
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0 auto 30px;
+    height: 340px;
+    box-shadow: $box-shadow1;
+    border-radius: 0 0 200px 60%/50px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 0 300px 50%/40px;
+
+    @media (max-width: 450px) {
+        border-radius: 0 0 200px 60%/50px;
+    }
+}

@@ -1,0 +1,8 @@
+.home-content {
+  height: 100%;
+  .home-container {
+    display: flex;
+    background-color: #fff;
+    height: calc(100% - 60px);
+  }
+}

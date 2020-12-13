@@ -1,0 +1,82 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .calendar-content {
+    background: #fbfbfb;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+   //width: 256px;
+   // height: 221px;
+    margin-top: 25px;
+
+    .months {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .months-header {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 7.47px;
+        padding-bottom: 4.64px;
+
+        .month-name {
+          font-family: "Baloo Tamma 2";
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+          text-align: center;
+          letter-spacing: 0.02em;
+          color: #2767bc;
+        }
+      }
+      .tasks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .tasks-content {
+          hr {
+            border: 1px solid #999999;
+            width: 211.16px;
+            margin-top: 12px;
+            margin-bottom: 12px;
+          }
+          .calendar-date {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 1;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #184177;
+            background: #FDCA40;
+            border-radius: 50%;
+            padding: 8px;
+            margin-right: 10px;
+            margin-left: 5px;
+          }
+          .task-date {
+            width: 171px;
+            height: 17px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16.8px;
+            text-align: center;
+            letter-spacing: 0.02em;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}

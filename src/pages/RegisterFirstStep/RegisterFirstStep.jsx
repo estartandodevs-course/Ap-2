@@ -3,6 +3,13 @@ import step1 from "../../assets/images/step1.png";
 import { InputText } from "../../components/InputText/InputText";
 import ImagemPerfil from "../../components/ImagemPerfil/ImagemPerfil";
 import "../../components/ImagemPerfil/ImagemPerfil";
+import { InputDate } from "../../components/InputDate/InputDate";
+import "./RegisterFirstStep.scss";
+import Checkbox from "../../components/Checkbox/Checkbox";
+import { SelectOptions } from "../../components/SelectOptions/SelectOptions";
+import { RegisterHeader } from "../../components/HeaderStep1/HeaderStep1";
+import Footer from "../../components/StepFooter/StepFooter";
+import { options } from "../../mocks/GenderOptions";
 
 export function RegisterFirstStep() {
   const isRequired = true;
