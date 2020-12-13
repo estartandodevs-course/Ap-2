@@ -1,17 +1,33 @@
 .profile-container {
+  background: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 28px 0;
 
-    .btn-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin-top: 26px;
-        span {
-            color: #ffffff;
-            width: 20.36px;
-            height: 20.36px;
-            font-size: 30px;
-            text-align: center;
-          }
+  .bio-content {
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 28px;
+  }
+
+  .btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+
+    img {
+      cursor: pointer;
     }
-  
+  }
+
+  .ocupation {
+    margin-bottom: 20px;
+  }
+
+  .preferences {
+    margin-top: 20px;
+  }
 }

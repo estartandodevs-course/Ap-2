@@ -3,9 +3,15 @@ import ContainerCard from "../../components/ContainerCard/containerCard";
 import "./Profile.scss";
 import { profiles } from "../../mocks/Profiles";
 import React, { useState } from "react";
-import check from "../../assets/icons/check-symbol.png";
 import { useHistory } from "react-router-dom";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
+import ThumbUp from "../../assets/icons/thumb_up_24px.svg";
+import ThumbDown from "../../assets/icons/thumb_down_24px.svg";
+import { StepHeader } from "../../components/StepHeader/StepHeader";
+import filter from "../../assets/icons/filter.svg";
+import { RegisterHeader } from "../../components/HeaderStep1/HeaderStep1";
+import Typography from "../../components/Typography/Typography";
+import UserRank from "../../components/ClassificaçaoUser/UserRank";
 
 export function Profile() {
   const [currentProfile, setProfile] = useState(1);
@@ -16,63 +22,79 @@ export function Profile() {
   });
 
   return (
-    <div className="profile-container">
-      {showCurrentProfile.map((option) => {
-        return (
-          <>
-            <img src={option.img} alt="Imagem Perfil"></img>
-            <div>{option.preferences}</div>
-            <ContainerCard
-              width="335px"
-              height="140px"
-              className="container-profile"
-              text={`Gostaria de conversar com ${option.name}?`}
-            >
-              <div className="btn-container" key={option.id}>
-                <Button
-                  width="48px"
-                  height="48px"
-                  background="#A73027"
-                  borderRadius="50%"
-                  className="btn"
-                  onClick={() =>
-                    currentProfile === 2
-                      ? history.push("/search-profile")
-                      : setProfile(option.id + 1)
-                  }
-                >
-                  <span>&#x2716;</span>
-                </Button>
-                <Button
-                  width="99px"
-                  height="48px"
-                  background="#184177"
-                  borderRadius="10px"
-                  className="btn btn-font2 btn-text btn-line"
-                  onClick={() => history.push("view-full-profile")}
-                >
-                  Ver perfil completo
-                </Button>
-                <Button
-                  width="48px"
-                  height="48px"
-                  background="#37923B"
-                  borderRadius="50%"
-                  className="btn"
-                  onClick={() =>
-                    currentProfile === 2
-                      ? history.push("/search-profile")
-                      : setProfile(option.id + 1)
-                  }
-                >
-                  <img src={check} alt="OK"></img>
-                </Button>
-              </div>
-            </ContainerCard>
-          </>
-        );
-      })}
+    <>
+      <div className="profile-container">
+        {showCurrentProfile.map((option) => {
+          return (
+            <>
+              <RegisterHeader height="100%" width="100%" className="content">
+                <StepHeader
+                  content="Filtros"
+                  src={filter}
+                  alt="Steps"
+                  className="flex-start"
+                />
+                <img src={option.img} alt="Imagem Perfil"></img>
+                <UserRank Rank={4}></UserRank>
+                <Typography type="bigTitle">
+                  {option.name} - {option.age}
+                </Typography>
+                <Typography type="bigTitle" className="ocupation">
+                  {option.ocupation}
+                </Typography>
+                <Typography type="textSettings" className="bio-content">
+                  {option.bio}
+                </Typography>
+                <div className="preferences">{option.preferences}</div>
+              </RegisterHeader>
+
+              <Typography type="evaluationText">
+                {`Conhece ${option.name}?`}
+              </Typography>
+
+              <ContainerCard
+                width="100%"
+                height="100%"
+                className="container-profile"
+                text={`Gostaria de conversar com ${option.name}?`}
+              >
+                <div className="btn-container" key={option.id}>
+                  <img
+                    src={ThumbDown}
+                    alt="Não"
+                    onClick={() =>
+                      currentProfile === 2
+                        ? history.push("/search-profile")
+                        : setProfile(option.id + 1)
+                    }
+                  ></img>
+
+                  <Button
+                    width="99px"
+                    height="48px"
+                    background="#184177"
+                    borderRadius="10px"
+                    className="btn btn-font2 btn-text btn-line"
+                    onClick={() => history.push("view-full-profile")}
+                  >
+                    Ver perfil completo
+                  </Button>
+                  <img
+                    src={ThumbUp}
+                    alt="Sim"
+                    onClick={() =>
+                      currentProfile === 2
+                        ? history.push("/search-profile")
+                        : setProfile(option.id + 1)
+                    }
+                  ></img>
+                </div>
+              </ContainerCard>
+            </>
+          );
+        })}
+      </div>
       <NavBar statusSearch={true} statusHome={false} statusChat={false} />
-    </div>
+    </>
   );
 }

@@ -8,17 +8,17 @@ export const profiles = [
     id: 1,
     name: "Isabel",
     img: perfil1,
-    age: "18 - anos",
+    age: "18 anos",
     ocupation: "Estudante - UFMG",
     preferences: <Preferencias vetorImage={vetorImage} />,
     bio:
-      "Olá! Sou Isabel, estou me mudando do interior de MG para BH, para cursar Direito na UFMG. Quero conhecer outras estudantes da faculdade para dividir apto e a experiência de ser universitárias! 😊😁👩‍🎓👩‍🎓 ",
+      "Olá! Sou Isabel, estou me mudando do interior de MG para BH, para cursar Direito na UFMG. Quero conhecer outras estudantes da faculdade para dividir apto e a experiência de ser universitárias! 😊😁👩‍🎓👩‍🎓",
   },
   {
     id: 2,
     name: "Marcos",
     img: perfil2,
-    age: "26 - anos",
+    age: "26 anos",
     ocupation: "Trainee - Unilever",
     preferences: <Preferencias vetorImage={vetorImage2} />,
     bio:
