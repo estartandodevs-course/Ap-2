@@ -35,8 +35,45 @@ export function ViewFullProfile() {
             </RegisterHeader>
 
             <div className="full-profile-content">
+              <Typography type="bigTitle" className="title">
+                Personalidade
+                <hr></hr>
+              </Typography>
+              <div className="modals">
+                <Typography type="label">Hobbies</Typography>
+                <div className="modal-content">
+                  {option.hobbies.map((element) => {
+                    return <span>{element.hobbie}</span>;
+                  })}
+                </div>
+              </div>
 
+              <div className="modals">
+                <Typography type="label">Interesses</Typography>
+                <div className="modal-content">
+                  {option.interests.map((element) => {
+                    return <span>{element.interest}</span>;
+                  })}
+                </div>
+              </div>
 
+              <Typography type="bigTitle" className="title">
+                Experiências
+                <hr></hr>
+              </Typography>
+
+              <div className="questions">
+                <input type="checkbox" checked readOnly={true} />
+                <Typography type="label">
+                  {option.experience.sharedApHouse}
+                </Typography>
+              </div>
+              <div className="questions">
+                <input type="checkbox" checked readOnly={true} />
+                <Typography type="label">
+                  {option.experience.sharedRoom}
+                </Typography>
+              </div>
             </div>
           </>
         );

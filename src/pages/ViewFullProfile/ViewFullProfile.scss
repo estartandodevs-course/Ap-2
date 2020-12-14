@@ -1,7 +1,8 @@
 .full-profile {
-    width: 100%;
-    height: auto;
-    background: #F8F8F8;
+  width: 100%;
+  height: auto;
+  background: #f8f8f8;
+  min-width: 375px;
 
   .flex-start {
     cursor: pointer;
@@ -16,6 +17,67 @@
   }
 
   .full-profile-content {
-      padding: 24px 19px 18px;
+    padding: 24px 19px 18px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .title {
+      color: #2767bc;
+      width: 100%;
+      padding: 16px 0;
+
+      hr {
+        border: 1px solid #999999;
+      }
+    }
+
+    .modals {
+      text-align: center;
+      width: 100%;
+      height: auto;
+      min-height: 114px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 5px;
+      margin: 20px 0 20px;
+      max-width: 335px;
+
+      @media (min-width: 750px) {
+        max-width: 600px;
+      }
+
+      .modal-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+
+        span {
+          background: linear-gradient(180deg, #87e4c7 3.05%, #5cacc2 77.55%);
+          border-radius: 12px;
+          width: 130px;
+          height: 35px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          flex-wrap: wrap;
+          margin: 11px;
+          font-family: "Inter";
+          font-size: 14px;
+          line-height: 17px;
+          letter-spacing: 0.02em;
+          color: #ffffff;
+        }
+      }
+    }
+
+    .questions {
+        display: flex;
+        align-items: center;
+
+        input {
+            margin-right: 10px;
+        }
+    }
   }
 }

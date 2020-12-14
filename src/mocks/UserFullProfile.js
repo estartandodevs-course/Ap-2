@@ -2,17 +2,21 @@ export const userFullProfile = [
   {
     id: 1,
     name: "Isabel Vieira",
-    hobbies: ["Cozinhar", "Tocar instrumentos", "Academia"],
+    hobbies: [
+      { hobbie: "Cozinhar" },
+      { hobbie: "Tocar instrumentos" },
+      { hobbie: "Academia" },
+    ],
     interests: [
-      "Engenharia",
-      "Tecnologia",
-      "Desenvolvimento de Software",
-      "Música",
-      "Arte",
+      { interest: "Engenharia" },
+      { interest: "Tecnologia" },
+      { interest: "Desenvolvimento de Software" },
+      { interest: "Música" },
+      { interest: "Arte" },
     ],
     experience: {
-      sharedApHouse: true,
-      sharedRoom: true,
+      sharedApHouse: "Já dividiu apartamento/casa antes?",
+      sharedRoom: "Já compartilhou quarto antes?",
       totalShared: 2,
       totalPeople: 3,
       timeSpent: "6 meses - 1 ano",
@@ -22,7 +26,7 @@ export const userFullProfile = [
       mainGoal: "Dividir valor do aluguel",
       livingLocation: "Universidade Federal de Minas Gerais",
       quantityPeople: 2,
-      maxMonthAmount: "R$ 800,00"
+      maxMonthAmount: "R$ 800,00",
     },
   },
   {
