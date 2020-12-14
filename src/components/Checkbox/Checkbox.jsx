@@ -1,4 +1,3 @@
-import { InputText } from "../InputText/InputText";
 import "./Checkbox.scss";
 
 export default function Checkbox(props) {
