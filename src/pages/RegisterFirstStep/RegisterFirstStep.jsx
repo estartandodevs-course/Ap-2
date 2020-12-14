@@ -15,8 +15,8 @@ export function RegisterFirstStep() {
   const isRequired = true;
   return (
     <div className="content">
-      <RegisterHeader>
-        <StepHeader content="Sobre você" src={step1} alt="Steps" />
+      <RegisterHeader height="340px" className="registerHeader">
+        <StepHeader content="Sobre você" src={step1} alt="Steps" className="step-container"/>
         <ImagemPerfil />
         <InputText
           colorInput="rgba(251,251,251,1)"
