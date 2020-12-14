@@ -7,6 +7,7 @@ import { useState } from "react";
 import Typography from "../../components/Typography/Typography";
 import { useHistory } from "react-router-dom";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
+import { InputText } from "../../components/InputText/InputText";
 
 export function ViewFullProfile() {
   const [currentProfile, setProfile] = useState(1);
@@ -74,6 +75,7 @@ export function ViewFullProfile() {
                   {option.experience.sharedRoom}
                 </Typography>
               </div>
+
               <Typography type="label" className="totals">
                 Quantos apartamentos/casas você ja dividiu?
                 <span>{option.experience.totalShared}</span>
@@ -85,7 +87,65 @@ export function ViewFullProfile() {
               </Typography>
 
               <div className="option-selected">
+                <Typography type="label" className="text-content">
+                  Quanto tempo passou dividindo?
+                </Typography>
+                <hr></hr>
+                <div className="color-content">
+                  {option.experience.timeSpent}
+                </div>
+              </div>
 
+              <div className="option-selected">
+                <Typography type="label" className="text-content">
+                  Já teve problemas de convivência?
+                </Typography>
+                <hr></hr>
+                <div className="color-content">
+                  {option.experience.troubleLiving}
+                </div>
+              </div>
+              <InputText
+                type="text"
+                colorInput="rgba(204,204,204,1)"
+                colorLabel="rgba(39,103,188,1)"
+                label="Se quiser, descreva como foi sua experiência"
+                className="input-bio"
+                classInput="input-text"
+              />
+
+              <Typography type="bigTitle" className="title">
+                Objetivos
+                <hr></hr>
+              </Typography>
+
+              <div className="option-selected">
+                <Typography type="label" className="text-content">
+                  Qual seu principal motivo para dividir apartamento/casa?
+                </Typography>
+                <hr></hr>
+                <div className="color-content">{option.goals.mainGoal}</div>
+              </div>
+
+              <div className="option-selected">
+                <Typography type="label" className="text-content">
+                  Qual local você quer morar?
+                </Typography>
+                <hr></hr>
+                <div className="color-content">
+                  {option.goals.livingLocation}
+                </div>
+              </div>
+
+              <Typography type="label" className="totals">
+                Com quantas pessoas gostaria de dividir?
+                <span>{option.goals.quantityPeople}</span>
+              </Typography>
+
+              <div className="option-selected">
+                <Typography type="label" className="text-content no-image" >
+                  Valor mensal máximo: {option.goals.maxMonthAmount}
+                </Typography>
               </div>
             </div>
           </>
