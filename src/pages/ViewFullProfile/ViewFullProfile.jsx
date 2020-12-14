@@ -62,17 +62,30 @@ export function ViewFullProfile() {
                 <hr></hr>
               </Typography>
 
-              <div className="questions">
+              <div className="questions-check">
                 <input type="checkbox" checked readOnly={true} />
                 <Typography type="label">
                   {option.experience.sharedApHouse}
                 </Typography>
               </div>
-              <div className="questions">
+              <div className="questions-check">
                 <input type="checkbox" checked readOnly={true} />
                 <Typography type="label">
                   {option.experience.sharedRoom}
                 </Typography>
+              </div>
+              <Typography type="label" className="totals">
+                Quantos apartamentos/casas você ja dividiu?
+                <span>{option.experience.totalShared}</span>
+              </Typography>
+
+              <Typography type="label" className="totals">
+                Com quantas pessoas você dividiu?
+                <span>{option.experience.totalPeople}</span>
+              </Typography>
+
+              <div className="option-selected">
+
               </div>
             </div>
           </>

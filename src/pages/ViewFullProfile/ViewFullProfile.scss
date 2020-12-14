@@ -71,13 +71,40 @@
       }
     }
 
-    .questions {
-        display: flex;
-        align-items: center;
+    .questions-check {
+      display: flex;
+      align-items: center;
+      margin: 16px 0;
 
-        input {
-            margin-right: 10px;
-        }
+      input {
+        margin-right: 10px;
+      }
+    }
+
+    .totals {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 18px;
+
+      span {
+        background: linear-gradient(180deg, #87e4c7 3.05%, #5cacc2 77.55%);
+        border-radius: 10px;
+        width: 56px;
+        height: 33px;
+        font-family: "Tuffy";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+        color: #fbfbfb;
+        margin: 27px 0 15px;
+      }
+    }
+
+    .option-selected {
+        margin: 25px 0;
     }
   }
 }
