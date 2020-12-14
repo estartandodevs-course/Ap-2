@@ -34,17 +34,19 @@ export function RegisterFirstStep() {
           for="check"
           id="check"
           classInput="input1"
-          className="input-bio"
-          label="Faculdade/Escola"
-        />
+        >
+          <InputText type="text" label="Faculdade/Escola" isRequired={isRequired} colorLabel="rgba(39,103,188,1)" colorInput="rgba(204,204,204,1)" classInput="input1" className="input-bio"/>
+        </Checkbox>
+
         <Checkbox
           content="Você trabalha?"
           for="check2"
           id="check2"
           classInput="input2"
-          className="input-bio"
-          label="Empresa"
-        />
+        > 
+          <InputText type="text" label="Empresa" isRequired={isRequired} colorLabel="rgba(39,103,188,1)" colorInput="rgba(204,204,204,1)" classInput="input2" className="input-bio"/>
+        </Checkbox>
+        
         <InputText
           type="text"
           colorInput="rgba(204,204,204,1)"
