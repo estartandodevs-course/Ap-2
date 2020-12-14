@@ -12,6 +12,8 @@ import filter from "../../assets/icons/filter.svg";
 import { RegisterHeader } from "../../components/HeaderStep1/HeaderStep1";
 import Typography from "../../components/Typography/Typography";
 import UserRank from "../../components/ClassificaçaoUser/UserRank";
+import Preferencias from "../../components/Preferencias/Preferencias";
+import { vetorImage, vetorImage2 } from "../../mocks/imagesPreferences";
 
 export function Profile() {
   const [currentProfile, setProfile] = useState(1);
@@ -45,7 +47,13 @@ export function Profile() {
                 <Typography type="textSettings" className="bio-content">
                   {option.bio}
                 </Typography>
-                <div className="preferences">{option.preferences}</div>
+                <div className="preferences">
+                  {currentProfile === 1 ? (
+                    <Preferencias vetorImage={vetorImage} />
+                  ) : (
+                    <Preferencias vetorImage={vetorImage2} />
+                  )}
+                </div>
               </RegisterHeader>
 
               <Typography type="evaluationText">
