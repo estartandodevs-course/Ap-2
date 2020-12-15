@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import Typography from "../../components/Typography/Typography";
 import { useHistory } from "react-router-dom";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
-import { InputText } from "../../components/InputText/InputText";
 import { useParams } from "react-router";
 import { Slider } from "../../components/Slider/Slider";
 
@@ -67,6 +66,7 @@ export function ViewFullProfile() {
               disabled
               defaultValue={-1}
             ></Slider>
+
             <div className="slider-label">
               <Typography type="label">Organizado</Typography>
               <Typography type="label">Relaxada</Typography>
@@ -78,6 +78,7 @@ export function ViewFullProfile() {
               disabled
               defaultValue={2}
             ></Slider>
+
             <div className="slider-label">
               <Typography type="label">Introvertida</Typography>
               <Typography type="label">Extrovertida</Typography>
@@ -89,6 +90,7 @@ export function ViewFullProfile() {
               disabled
               defaultValue={-3}
             ></Slider>
+
             <div className="slider-label">
               <Typography type="label">Curte conversar</Typography>
               <Typography type="label">Mais na minha</Typography>
