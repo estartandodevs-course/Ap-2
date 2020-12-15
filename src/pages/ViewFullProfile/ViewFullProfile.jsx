@@ -20,7 +20,7 @@ export function ViewFullProfile() {
 
   useEffect(() => {
     const userSelected = userFullProfile.find(
-      (user) => user.id === parseInt(id)
+      (user) => user.id.toString() === id.toString()
     );
     userSelected && setProfile(userSelected);
   }, [id]);
