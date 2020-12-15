@@ -23,8 +23,8 @@ export function SliderFilter() {
   }
 
   return (
-    <div className="select" onClick={onClick}>
-      <div className="placeholder">
+    <div className="select-slider" onClick={onClick}>
+      <div className="placeholder-slider">
         <Typography type="label">Faixa de Idade:</Typography>
         <Typography
           type="label"
@@ -40,7 +40,7 @@ export function SliderFilter() {
             <label htmlFor="range-1">18</label>
             <input
               type="range"
-              className="slider"
+              className="slider-filter"
               id="range-1"
               min="18"
               max="40"
@@ -49,7 +49,7 @@ export function SliderFilter() {
             />
             <input
               type="range"
-              className="slider"
+              className="slider-filter"
               id="range-2"
               min="41"
               max="80"
