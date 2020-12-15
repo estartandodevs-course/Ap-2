@@ -12,25 +12,29 @@ import { useParams } from "react-router";
 import { Slider } from "../../components/Slider/Slider";
 
 export function ViewFullProfile() {
-  let { id } = useParams();
+  const { id } = useParams();
 
-  const [currentProfile, setProfile] = useState(1);
+  const [currentProfile, setProfile] = useState({});
+
   const history = useHistory();
 
   useEffect(() => {
-    setProfile(userFullProfile[0]);
-  }, []);
+    const userSelected = userFullProfile.find(
+      (user) => user.id === parseInt(id)
+    );
+    userSelected && setProfile(userSelected);
+  }, [id]);
 
-  let showCurrentProfile = userFullProfile.find((option) => {
-    return option.id === id;
-  });
+  const {
+    name = "",
+    hobbies = [],
+    interests = [],
+    experience,
+    goals,
+  } = currentProfile;
 
-  
-  return <div></div>;
   return (
     <div className="full-profile">
-      {/* {showCurrentProfile.map((option) => { */}
-      {/* return ( */}
       <>
         <RegisterHeader height="100%" width="auto" className="content">
           <StepHeader
@@ -41,7 +45,7 @@ export function ViewFullProfile() {
             onClick={() => history.push("/profile")}
           />
           <Typography type="bigTitle" className="typography">
-            {currentProfile.name}
+            {name}
           </Typography>
         </RegisterHeader>
 
@@ -65,8 +69,8 @@ export function ViewFullProfile() {
           <div className="modals">
             <Typography type="label">Hobbies</Typography>
             <div className="modal-content">
-              {currentProfile.hobbies.map((element) => {
-                return <span>{element.hobbie}</span>;
+              {hobbies.map((element, index) => {
+                return <span key={index}>{element.hobbie}</span>;
               })}
             </div>
           </div>
@@ -74,8 +78,8 @@ export function ViewFullProfile() {
           <div className="modals">
             <Typography type="label">Interesses</Typography>
             <div className="modal-content">
-              {currentProfile.interests.map((element) => {
-                return <span>{element.interest}</span>;
+              {interests?.map((element, index) => {
+                return <span key={index}>{element.interest}</span>;
               })}
             </div>
           </div>
@@ -85,96 +89,100 @@ export function ViewFullProfile() {
             <hr></hr>
           </Typography>
 
-          <div className="questions-check">
-            <input type="checkbox" checked readOnly={true} />
-            <Typography type="label">
-              {currentProfile.experience.sharedApHouse}
-            </Typography>
-          </div>
-          <div className="questions-check">
-            <input type="checkbox" checked readOnly={true} />
-            <Typography type="label">
-              {currentProfile.experience.sharedRoom}
-            </Typography>
-          </div>
+          {experience && (
+            <>
+              <div className="questions-check">
+                <input type="checkbox" checked readOnly={true} />
+                <Typography type="label">
+                  {experience?.sharedApHouse || ""}
+                </Typography>
+              </div>
+              <div className="questions-check">
+                <input type="checkbox" checked readOnly={true} />
+                <Typography type="label">
+                  {experience?.sharedRoom || ""}
+                </Typography>
+              </div>
 
-          <Typography type="label" className="totals">
-            Quantos apartamentos/casas você ja dividiu?
-            <span>{currentProfile.experience.totalShared}</span>
-          </Typography>
+              <Typography type="label" className="totals">
+                Quantos apartamentos/casas você ja dividiu?
+                <span>{experience?.totalShared || ""}</span>
+              </Typography>
 
-          <Typography type="label" className="totals">
-            Com quantas pessoas você dividiu?
-            <span>{currentProfile.experience.totalPeople}</span>
-          </Typography>
+              <Typography type="label" className="totals">
+                Com quantas pessoas você dividiu?
+                <span>{experience?.totalPeople || ""}</span>
+              </Typography>
 
-          <div className="option-selected">
-            <Typography type="label" className="text-content">
-              Quanto tempo passou dividindo?
-            </Typography>
-            <hr></hr>
-            <div className="color-content">
-              {currentProfile.experience.timeSpent}
-            </div>
-          </div>
+              <div className="option-selected">
+                <Typography type="label" className="text-content">
+                  Quanto tempo passou dividindo?
+                </Typography>
+                <hr></hr>
+                <div className="color-content">
+                  {experience?.timeSpent || ""}
+                </div>
+              </div>
 
-          <div className="option-selected">
-            <Typography type="label" className="text-content">
-              Já teve problemas de convivência?
-            </Typography>
-            <hr></hr>
-            <div className="color-content">
-              {currentProfile.experience.troubleLiving}
-            </div>
-          </div>
-          <InputText
-            type="text"
-            colorInput="rgba(204,204,204,1)"
-            colorLabel="rgba(39,103,188,1)"
-            label="Se quiser, descreva como foi sua experiência"
-            className="input-bio"
-            classInput="input-text"
-          />
+              <div className="option-selected">
+                <Typography type="label" className="text-content">
+                  Já teve problemas de convivência?
+                </Typography>
+                <hr></hr>
+                <div className="color-content">
+                  {experience?.troubleLiving || ""}
+                </div>
+              </div>
+              <InputText
+                type="text"
+                colorInput="rgba(204,204,204,1)"
+                colorLabel="rgba(39,103,188,1)"
+                label="Se quiser, descreva como foi sua experiência"
+                className="input-bio"
+                classInput="input-text"
+              />
+            </>
+          )}
 
-          <Typography type="bigTitle" className="title">
-            Objetivos
-            <hr></hr>
-          </Typography>
+          {goals && (
+            <>
+              <Typography type="bigTitle" className="title">
+                Objetivos
+                <hr></hr>
+              </Typography>
 
-          <div className="option-selected">
-            <Typography type="label" className="text-content">
-              Qual seu principal motivo para dividir apartamento/casa?
-            </Typography>
-            <hr></hr>
-            <div className="color-content">
-              {currentProfile.goals.mainGoal}
-            </div>
-          </div>
+              <div className="option-selected">
+                <Typography type="label" className="text-content">
+                  Qual seu principal motivo para dividir apartamento/casa?
+                </Typography>
+                <hr></hr>
+                <div className="color-content">{goals?.mainGoal || ""}</div>
+              </div>
 
-          <div className="option-selected">
-            <Typography type="label" className="text-content">
-              Qual local você quer morar?
-            </Typography>
-            <hr></hr>
-            <div className="color-content">
-              {currentProfile.goals.livingLocation}
-            </div>
-          </div>
+              <div className="option-selected">
+                <Typography type="label" className="text-content">
+                  Qual local você quer morar?
+                </Typography>
+                <hr></hr>
+                <div className="color-content">
+                  {goals?.livingLocation || ""}
+                </div>
+              </div>
 
-          <Typography type="label" className="totals">
-            Com quantas pessoas gostaria de dividir?
-            <span>{currentProfile.goals.quantityPeople}</span>
-          </Typography>
+              <Typography type="label" className="totals">
+                Com quantas pessoas gostaria de dividir?
+                <span>{goals?.quantityPeople || ""}</span>
+              </Typography>
 
-          <div className="option-selected">
-            <Typography type="label" className="text-content no-image">
-              Valor mensal máximo: {currentProfile.goals.maxMonthAmount}
-            </Typography>
-          </div>
+              <div className="option-selected">
+                <Typography type="label" className="text-content no-image">
+                  Valor mensal máximo: {goals?.maxMonthAmount || ""}
+                </Typography>
+              </div>
+            </>
+          )}
         </div>
       </>
-      {/* ); */}
-      {/* })} */}
       <NavBar statusSearch={true} statusHome={false} statusChat={false} />
     </div>
   );

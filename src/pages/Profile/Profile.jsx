@@ -26,9 +26,9 @@ export function Profile() {
   return (
     <>
       <div className="profile-container">
-        {showCurrentProfile.map((option) => {
+        {showCurrentProfile.map((option, index) => {
           return (
-            <>
+            <div key={index}>
               <RegisterHeader height="100%" width="100%" className="content">
                 <StepHeader
                   content="Filtros"
@@ -76,18 +76,20 @@ export function Profile() {
                         : setProfile(option.id + 1)
                     }
                   ></img>
-                 
-                    <Button
-                      width="99px"
-                      height="48px"
-                      background="#184177"
-                      borderRadius="10px"
-                      className="btn btn-font2 btn-text btn-line"
-                       onClick={() => history.push(`/view-full-profile/${option.id}`)}
-                    >
-                      Ver perfil completo
-                    </Button>
-                
+
+                  <Button
+                    width="99px"
+                    height="48px"
+                    background="#184177"
+                    borderRadius="10px"
+                    className="btn btn-font2 btn-text btn-line"
+                    onClick={() =>
+                      history.push(`/view-full-profile/${option.id}`)
+                    }
+                  >
+                    Ver perfil completo
+                  </Button>
+
                   <img
                     src={ThumbUp}
                     alt="Sim"
@@ -99,7 +101,7 @@ export function Profile() {
                   ></img>
                 </div>
               </ContainerCard>
-            </>
+            </div>
           );
         })}
       </div>
