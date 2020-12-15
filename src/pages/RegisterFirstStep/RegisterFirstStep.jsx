@@ -29,6 +29,7 @@ export function RegisterFirstStep() {
       <section className="form">
         <InputDate />
         <SelectOptions options={options} content="Gênero:" />
+        
         <Checkbox
           content="Você é estudante?"
           for="check"
