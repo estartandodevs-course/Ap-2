@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../../components/Button/Button";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 import { useHistory } from "react-router-dom";
+import { SliderFilter } from "../../components/SliderFilter/SliderFilter";
 
 export function SearchProfile() {
   const history = useHistory();
@@ -12,6 +13,7 @@ export function SearchProfile() {
 
   return (
     <div>
+      <SliderFilter />
       <Button
         width="185px"
         background="#2767BC"
