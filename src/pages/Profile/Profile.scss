@@ -4,7 +4,12 @@
   flex-direction: column;
   align-items: center;
   padding: 0 0 28px 0;
+  // height: 100%;
 
+  @media (min-height: 821px) {
+    height: inherit;
+  }
+  
   .bio-content {
     text-align: center;
     width: 100%;

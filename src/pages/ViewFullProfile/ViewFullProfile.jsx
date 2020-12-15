@@ -57,7 +57,7 @@ export function ViewFullProfile() {
 
           <div className="slider-container">
             <Typography type="label">Calma Agitada</Typography>
-            <Slider RangeMin={-3} RangeMax={3} readOnly={true}></Slider>
+            <Slider RangeMin={-3} RangeMax={3} disabled></Slider>
             <Typography type="label">Organizado Relaxada</Typography>
             <Slider RangeMin={-3} RangeMax={3}></Slider>
             <Typography type="label">Introvertida Extrovertida</Typography>
