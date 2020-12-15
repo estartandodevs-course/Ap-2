@@ -57,13 +57,33 @@ export function ViewFullProfile() {
 
           <div className="slider-container">
             <Typography type="label">Calma Agitada</Typography>
-            <Slider RangeMin={-3} RangeMax={3} disabled></Slider>
+            <Slider
+              RangeMin={-3}
+              RangeMax={3}
+              disabled
+              defaultValue={-1}
+            ></Slider>
             <Typography type="label">Organizado Relaxada</Typography>
-            <Slider RangeMin={-3} RangeMax={3}></Slider>
+            <Slider
+              RangeMin={-3}
+              RangeMax={3}
+              disabled
+              defaultValue={2}
+            ></Slider>
             <Typography type="label">Introvertida Extrovertida</Typography>
-            <Slider RangeMin={-3} RangeMax={3}></Slider>
+            <Slider
+              RangeMin={-3}
+              RangeMax={3}
+              disabled
+              defaultValue={-3}
+            ></Slider>
             <Typography type="label">Curte conversar Mais na minha</Typography>
-            <Slider RangeMin={-3} RangeMax={3}></Slider>
+            <Slider
+              RangeMin={-3}
+              RangeMax={3}
+              disabled
+              defaultValue={1}
+            ></Slider>
           </div>
 
           <div className="modals">
