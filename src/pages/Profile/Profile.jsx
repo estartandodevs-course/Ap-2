@@ -26,7 +26,7 @@ export function Profile() {
   return (
     <>
       <div className="profile-container">
-        {showCurrentProfile.map((option) => {
+        {showCurrentProfile.map((option, index) => {
           return (
             <>
               <RegisterHeader height="100%" width="100%" className="content">
@@ -62,11 +62,11 @@ export function Profile() {
 
               <ContainerCard
                 width="100%"
-                height="100%"
+               // height="100%"
                 className="container-profile"
                 text={`Gostaria de conversar com ${option.name}?`}
               >
-                <div className="btn-container" key={option.id}>
+                <div className="btn-container" key={index}>
                   <img
                     src={ThumbDown}
                     alt="Não"
@@ -83,10 +83,13 @@ export function Profile() {
                     background="#184177"
                     borderRadius="10px"
                     className="btn btn-font2 btn-text btn-line"
-                    onClick={() => history.push("view-full-profile")}
+                    onClick={() =>
+                      history.push(`/view-full-profile/${option.id}`)
+                    }
                   >
                     Ver perfil completo
                   </Button>
+
                   <img
                     src={ThumbUp}
                     alt="Sim"

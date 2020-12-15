@@ -1,5 +1,5 @@
 .slider {
-    position: absolute;
+   // position: absolute;
     top: 100px;
     left: 100px;
     -webkit-appearance: none;
@@ -9,6 +9,7 @@
     height: 16px;
     border-radius: 20px;
     width: 300px;
+    margin: 4px 0 32px 0;
 
 }
 .slider:focus {

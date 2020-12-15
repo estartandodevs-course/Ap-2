@@ -1,4 +1,4 @@
-.select {
+.select-slider {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@
     border-radius: 5px;
     cursor: pointer;
   
-    .placeholder {
+    .placeholder-slider {
       width: 100%;
       height: auto;
       display: flex;
@@ -49,7 +49,7 @@
         color: #2767bc;
       }
   
-      .slider {
+      .slider-filter {
         -webkit-appearance: none;
         outline: none;
   
