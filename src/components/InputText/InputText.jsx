@@ -10,15 +10,18 @@ export function InputText({
   classInput,
   marginBottom,
   width,
+  type,
+  value,
+  setValue,
 }) {
-  const [value, setValue] = useState("");
+  const [value2, setValue2] = useState("");
   const [focused, setFocused] = useState(false);
 
   function onChange(event) {
-    setValue(event.target.value);
+    setValue2(event.target.value);
   }
 
-  const isInputDown = value || focused;
+  const isInputDown = value2 || focused;
 
   const HasClassName = className != null ? "input input-bio" : "input";
   const inputClass = isInputDown ? `${HasClassName} focus` : `${HasClassName}`;
@@ -28,7 +31,7 @@ export function InputText({
       style={{ marginBottom: marginBottom }}
     >
       <input
-        type="text"
+        type={ type }
         maxLength="250"
         style={{
           borderColor: colorInput,
@@ -37,7 +40,7 @@ export function InputText({
           width: width,
         }}
         onChange={onChange}
-        value={value}
+        value={value2}
         onBlur={() => setFocused(false)}
         onFocus={() => setFocused(true)}
         className={inputClass}

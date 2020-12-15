@@ -75,6 +75,8 @@ export function SearchProfile() {
         >
           Mostrar todos perfis
         </Button>
+
+        <SliderFilter />
       </main>
 
       <NavBar statusSearch={true} statusHome={false} statusChat={false} />

@@ -1,10 +1,11 @@
-import './HeaderStep1.scss';
+import "./HeaderStep1.scss";
 
 export function RegisterHeader(props) {
-    const { children, height, className } = props;
-    return (
-        <div className={className} style={{height:height}}>
-            {children}
-        </div>
-    )
+  const { children, width, height, className } = props;
+  let selectClass = `${className} registerHeader`;
+  return (
+    <div className={selectClass} style={{ width: width, height: height }}>
+      {children}
+    </div>
+  );
 }

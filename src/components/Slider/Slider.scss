@@ -1,0 +1,28 @@
+.slider {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    height: 16px;
+    border-radius: 20px;
+    width: 300px;
+
+}
+.slider:focus {
+    outline: none;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #87E4C7;
+    height: 24px;
+    width: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.slider::-webkit-slider-runnable-track {
+    border-radius: 10px;
+}

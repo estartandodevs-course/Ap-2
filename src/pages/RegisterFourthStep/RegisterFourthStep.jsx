@@ -5,6 +5,5 @@ export function RegisterFourthStep(){
         <>
         <div>TO DO STEP 4</div>
         </>
-
     )
 }

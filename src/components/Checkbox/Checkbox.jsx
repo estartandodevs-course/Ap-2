@@ -1,8 +1,7 @@
-import { InputText } from "../InputText/InputText";
 import "./Checkbox.scss";
 
 export default function Checkbox(props) {
-  const {content,label,id,classInput, htmlfor, className} = props;
+  const {content,id,classInput, htmlfor, children} = props;
   return (
     <div className="checkboxFunction">
       <div className="divCheckbox">
@@ -10,7 +9,7 @@ export default function Checkbox(props) {
         <label htmlFor={htmlfor} className="label">{content}</label>
       </div>
       <div className="inputCheck">
-        <InputText label={label} isRequired={true} colorLabel="rgba(39,103,188,1)" colorInput="rgba(204,204,204,1)" classInput={classInput} className={className}/>
+        {children}
       </div>
         
     </div>
