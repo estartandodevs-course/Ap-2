@@ -56,28 +56,44 @@ export function ViewFullProfile() {
           </Typography>
 
           <div className="slider-container">
-            <Typography type="label">Calma Agitada</Typography>
+            <div className="slider-label">
+              <Typography type="label">Calma</Typography>
+              <Typography type="label">Agitada</Typography>
+            </div>
+
             <Slider
               RangeMin={-3}
               RangeMax={3}
               disabled
               defaultValue={-1}
             ></Slider>
-            <Typography type="label">Organizado Relaxada</Typography>
+            <div className="slider-label">
+              <Typography type="label">Organizado</Typography>
+              <Typography type="label">Relaxada</Typography>
+            </div>
+
             <Slider
               RangeMin={-3}
               RangeMax={3}
               disabled
               defaultValue={2}
             ></Slider>
-            <Typography type="label">Introvertida Extrovertida</Typography>
+            <div className="slider-label">
+              <Typography type="label">Introvertida</Typography>
+              <Typography type="label">Extrovertida</Typography>
+            </div>
+
             <Slider
               RangeMin={-3}
               RangeMax={3}
               disabled
               defaultValue={-3}
             ></Slider>
-            <Typography type="label">Curte conversar Mais na minha</Typography>
+            <div className="slider-label">
+              <Typography type="label">Curte conversar</Typography>
+              <Typography type="label">Mais na minha</Typography>
+            </div>
+
             <Slider
               RangeMin={-3}
               RangeMax={3}
@@ -114,13 +130,13 @@ export function ViewFullProfile() {
               <div className="questions-check">
                 <input type="checkbox" checked readOnly={true} />
                 <Typography type="label">
-                  {experience?.sharedApHouse || ""}
+                  Já dividiu apartamento/casa antes?
                 </Typography>
               </div>
               <div className="questions-check">
                 <input type="checkbox" checked readOnly={true} />
                 <Typography type="label">
-                  {experience?.sharedRoom || ""}
+                  Já compartilhou quarto antes?
                 </Typography>
               </div>
 
@@ -153,14 +169,16 @@ export function ViewFullProfile() {
                   {experience?.troubleLiving || ""}
                 </div>
               </div>
-              <InputText
-                type="text"
-                colorInput="rgba(204,204,204,1)"
-                colorLabel="rgba(39,103,188,1)"
-                label="Se quiser, descreva como foi sua experiência"
-                className="input-bio"
-                classInput="input-text"
-              />
+              {experience?.description ? (
+                <Typography type="label" className="text-content">
+                  Se quiser, descreva como foi sua experiência:
+                  <span className="experience-description">
+                    {experience.description}
+                  </span>
+                </Typography>
+              ) : (
+                ""
+              )}
             </>
           )}
 

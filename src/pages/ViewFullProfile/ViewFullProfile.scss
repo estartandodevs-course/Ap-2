@@ -17,7 +17,7 @@
   }
 
   .full-profile-content {
-    padding: 24px 19px 18px;
+    padding: 0 19px 24px 18px;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -25,6 +25,13 @@
     .slider-container {
       display: flex;
       flex-direction: column;
+      padding-top: 8px;
+
+      .slider-label {
+        display: flex;
+        justify-content: space-between;
+        
+      }
     }
     .title {
       color: #2767bc;
@@ -96,9 +103,6 @@
         border-radius: 10px;
         width: 56px;
         height: 33px;
-        font-family: "Tuffy";
-        font-style: normal;
-        font-weight: bold;
         font-size: 24px;
         line-height: 36px;
         text-align: center;
@@ -150,12 +154,14 @@
       }
 
       .no-image {
-          background: none;
+        background: none;
       }
     }
 
-    .input-text {
-        margin-bottom: 30px;
+    .experience-description {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
     }
   }
 }
