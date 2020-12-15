@@ -10,8 +10,15 @@ import {options} from  '../../mocks/GenderOptions';
 import Checkbox from "../../components/Checkbox/Checkbox";
 import { SliderFilter } from "../../components/SliderFilter/SliderFilter";
 import { InputText } from "../../components/InputText/InputText";
+import { useHistory } from "react-router-dom";
 
 export function SearchProfile() {
+
+  const history = useHistory();
+
+  function onClick(){
+    history.push("/profile");
+  }
   let isRequired = true;
   return (
     <div className="searchProfile-content">
@@ -67,6 +74,7 @@ export function SearchProfile() {
           height="32px"
           borderRadius="10px"
           className="btn btn-font1 btn-text"
+          onClick={onClick}
         >
           Mostrar todos perfis
         </Button>
