@@ -8,10 +8,14 @@ import Typography from "../../components/Typography/Typography";
 import { useHistory } from "react-router-dom";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 import { InputText } from "../../components/InputText/InputText";
+import { useParams } from 'react-router';
 
 export function ViewFullProfile() {
+  let { id } = useParams();
+
   const [currentProfile, setProfile] = useState(1);
   const history = useHistory();
+  
 
   let showCurrentProfile = userFullProfile.filter((option) => {
     return option.id === currentProfile;

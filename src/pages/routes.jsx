@@ -23,7 +23,7 @@ export function Routes() {
       <Route path="/chat" component={Chat} />
       <Route path="/login" component={Login} />
       <Route path="/profile" component={Profile} />
-      <Route path="/view-full-profile" component={ViewFullProfile} />
+      <Route path="/view-full-profile/:id" component={ViewFullProfile} />
       <Route component={() => <div>ERROR 404</div>} />
     </Switch>
   );

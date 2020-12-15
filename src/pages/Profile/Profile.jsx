@@ -68,17 +68,18 @@ export function Profile() {
                         : setProfile(option.id + 1)
                     }
                   ></img>
-
-                  <Button
-                    width="99px"
-                    height="48px"
-                    background="#184177"
-                    borderRadius="10px"
-                    className="btn btn-font2 btn-text btn-line"
-                    onClick={() => history.push("view-full-profile")}
-                  >
-                    Ver perfil completo
-                  </Button>
+                 
+                    <Button
+                      width="99px"
+                      height="48px"
+                      background="#184177"
+                      borderRadius="10px"
+                      className="btn btn-font2 btn-text btn-line"
+                       onClick={() => history.push(`/view-full-profile/${option.id}`)}
+                    >
+                      Ver perfil completo
+                    </Button>
+                
                   <img
                     src={ThumbUp}
                     alt="Sim"
