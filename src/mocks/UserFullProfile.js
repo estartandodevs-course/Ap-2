@@ -41,8 +41,6 @@ export const userFullProfile = [
       { interest: "Engenharia" },
       { interest: "Tecnologia" },
       { interest: "Desenvolvimento de Software" },
-      { interest: "Música" },
-      { interest: "Arte" },
     ],
     experience: {
       sharedApHouse: "Já dividiu apartamento/casa antes?",
