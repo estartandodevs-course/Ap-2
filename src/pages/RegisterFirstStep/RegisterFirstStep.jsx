@@ -15,8 +15,8 @@ export function RegisterFirstStep() {
   const isRequired = true;
   return (
     <div className="content">
-      <RegisterHeader>
-        <StepHeader content="Sobre você" src={step1} alt="Steps" />
+      <RegisterHeader height="340px" className="registerHeader">
+        <StepHeader content="Sobre você" src={step1} alt="Steps" className="step-container"/>
         <ImagemPerfil />
         <InputText
           type="text"
@@ -29,6 +29,7 @@ export function RegisterFirstStep() {
       <section className="form">
         <InputDate />
         <SelectOptions options={options} content="Gênero:" />
+        
         <Checkbox
           content="Você é estudante?"
           for="check"

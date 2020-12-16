@@ -1,0 +1,46 @@
+
+.searchProfile-content{
+    background: #fff;
+
+    .registerHeader{
+        border-radius: 0 0 200px 45%/15px;
+    }
+    .step-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px 28px;
+
+        .bigLabel{
+            padding-left:9px;
+        }
+
+        .select-container{
+            margin: 32px 0;
+        }
+
+        .checkboxFunction{
+            margin-bottom:10px;
+            margin-top:33px;
+            width: 100%;
+            .divCheckbox{
+                display: flex;
+                align-items: baseline;
+            }
+        }
+
+        .btn{
+            margin: 30px auto 0;
+        }
+
+        @media(min-width:400px){
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
