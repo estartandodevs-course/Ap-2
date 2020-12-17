@@ -3,7 +3,7 @@ import Select, { components } from "react-select";
 import React, { useState } from "react";
 
 export function SelectOptions(props) {
-  const { content, options = [] } = props;
+  const { content, options = [], setValue} = props;
   const [isSelected, setSelected] = useState(false);
   const [isShown, setShowOption] = useState(false);
 
@@ -61,8 +61,9 @@ export function SelectOptions(props) {
     return <components.Option {...props}>{props.children}</components.Option>;
   };
 
-  function onChange() {
+  function onChange(event) {
     setSelected(true);
+    setValue(event.value);
   }
 
   function onClick() {
@@ -86,6 +87,8 @@ export function SelectOptions(props) {
           classNamePrefix="select"
           // defaultValue={options[0]}
           placeholder="Selecione"
+         // value={value}
+
         />
       ) : null}
     </div>
