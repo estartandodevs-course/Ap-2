@@ -128,6 +128,11 @@
       line-height: 21px;
       letter-spacing: 0.02em;
 
+      hr {
+        width: 100%;
+        border: 1px solid #CCCCCC;
+        background: #2767BC;
+      }
       .color-content {
         background: linear-gradient(180deg, #87e4c7 3.05%, #5cacc2 77.55%);
         border-radius: 0px 0px 5px 5px;
