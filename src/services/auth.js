@@ -16,10 +16,21 @@ export async function login(email, password) {
   }
 }
 
-// export async function logout() {
-//   try {
-//     await firebase.auth().signOut();
-//   } catch(error){
+export function onAuthStateChanged(callback) {
+  return firebase.auth().onAuthStateChanged((user) => {
+    console.log(user)
+    if (user) {
+      callback({ isLogged: true });
+    } else {
+      callback({ isLogged: false });
+    }
+  });
+}
 
-//   }
-// }
+export async function logout() {
+  try {
+    await firebase.auth().signOut();
+  } catch (error) {
+    console.log(error);
+  }
+}

@@ -16,10 +16,10 @@ import Notif from "../../assets/icons/Notificação.svg";
 
 const SideBar = () => (
   <aside className="side-menu">
-    <SideMenu src={iconNotif} notif={Notif} to="/home/notifications" />
-    <SideMenu src={iconCalendar} notif={Notif} to="/home/calendar" />
-    <SideMenu src={iconMatches} notif={Notif} to="/home/matches" />
-    <SideMenu src={iconConfig} notif={Notif} to="/home/settings" />
+    <SideMenu src={iconNotif} notif={Notif} to="/notifications" />
+    <SideMenu src={iconCalendar} notif={Notif} to="/calendar" />
+    <SideMenu src={iconMatches} notif={Notif} to="/matches" />
+    <SideMenu src={iconConfig} notif={Notif} to="/settings" />
   </aside>
 );
 
@@ -48,11 +48,11 @@ const Header = ({ onClick }) => (
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/home/notifications" component={Notifications} />
-      <Route path="/home/calendar" component={Calendar} />
-      <Route path="/home/matches" component={Matches} />
-      <Route path="/home/settings" component={Settings} />
-      <Redirect to="/home/notifications" />
+      <Route path="/notifications" component={Notifications} />
+      <Route path="/calendar" component={Calendar} />
+      <Route path="/matches" component={Matches} />
+      <Route path="/settings" component={Settings} />
+      <Redirect to="/notifications" />
     </Switch>
   );
 };

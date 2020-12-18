@@ -8,7 +8,7 @@ export default function footer() {
       <Link id="anterior" to="/">
         Anterior
       </Link>
-      <Link id="proximo" to="/home">
+      <Link id="proximo" to="/">
         Próximo
       </Link>
     </div>

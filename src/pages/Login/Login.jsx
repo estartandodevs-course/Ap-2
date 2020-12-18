@@ -19,10 +19,10 @@ export function Login() {
     console.log(email, password)
     const response = await login(email, password);
     if (response.success) {
-      history.push("/home");
+      history.push("/");
     }
     else {
-      alert('deu merda amigo');
+      console.log("login inválido")
     }
   }
 
