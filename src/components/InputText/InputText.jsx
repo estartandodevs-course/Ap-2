@@ -13,15 +13,16 @@ export function InputText({
   type,
   value,
   setValue,
+  name,
 }) {
-  const [value2, setValue2] = useState("");
+
   const [focused, setFocused] = useState(false);
 
   function onChange(event) {
-    setValue2(event.target.value);
+    setValue(event.target.value);
   }
 
-  const isInputDown = value2 || focused;
+  const isInputDown = value || focused;
 
   const HasClassName = className != null ? "input input-bio" : "input";
   const inputClass = isInputDown ? `${HasClassName} focus` : `${HasClassName}`;
@@ -40,11 +41,12 @@ export function InputText({
           width: width,
         }}
         onChange={onChange}
-        value={value2}
+        value={value}
         onBlur={() => setFocused(false)}
         onFocus={() => setFocused(true)}
         className={inputClass}
         required={isRequired}
+        name={name}
       />
 
       <label

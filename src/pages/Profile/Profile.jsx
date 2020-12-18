@@ -14,14 +14,24 @@ import Typography from "../../components/Typography/Typography";
 import UserRank from "../../components/ClassificaçaoUser/UserRank";
 import Preferencias from "../../components/Preferencias/Preferencias";
 import { vetorImage, vetorImage2 } from "../../mocks/imagesPreferences";
+//import { getUsers } from "../../services/user.service";
 
 export function Profile() {
   const [currentProfile, setProfile] = useState(1);
   const history = useHistory();
+  //const [profiles, setProfiles] = useState([]);
 
   let showCurrentProfile = profiles.filter((option) => {
     return option.id === currentProfile;
   });
+
+  // useEffect(() => {
+  //   (async () => {
+  //     const data = await getUsers();
+  //     setProfiles(data);
+  //     console.log(data);
+  //   })();
+  // }, []);
 
   return (
     <>
@@ -62,7 +72,7 @@ export function Profile() {
 
               <ContainerCard
                 width="100%"
-               // height="100%"
+                // height="100%"
                 className="container-profile"
                 text={`Gostaria de conversar com ${option.name}?`}
               >

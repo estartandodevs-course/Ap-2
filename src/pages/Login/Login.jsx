@@ -2,7 +2,7 @@ import ContainerCard from "../../components/ContainerCard/containerCard";
 import "./Login.scss";
 import { InputText } from "../../components/InputText/InputText";
 import { Button } from "../../components/Button/Button";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import emailIcon from "../../assets/icons/mail_outline_24px_outlined.png";
 import senhaIcon from "../../assets/icons/vpn_key_24px_outlined.svg";
 import { login } from "../../services/auth";
@@ -16,12 +16,13 @@ export function Login() {
   const [password, setPassword] = useState('');
 
   async function handleLogin() {
+    console.log(email, password)
     const response = await login(email, password);
     if (response.success) {
-      history.push("/home");
+      history.push("/");
     }
     else {
-      alert('deu merda amigo');
+      console.log("login inválido")
     }
   }
 
@@ -74,6 +75,9 @@ export function Login() {
           </Button>
         </div>
       </ContainerCard>
+      <p>Ainda não se cadastrou?
+      <Link to="/register" className="register-link"> Cadastre-se</Link>
+       </p>
     </div>
   );
 }

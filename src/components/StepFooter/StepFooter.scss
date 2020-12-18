@@ -13,10 +13,11 @@
     align-items: center;
     position: sticky;
     bottom:0;
-    a {
+    span{
         text-decoration: none;
         font-weight: 600;
         padding: 20px;
+        cursor: pointer;
     }
     #proximo {
         color: $primary-2;

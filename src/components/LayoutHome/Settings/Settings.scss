@@ -3,16 +3,19 @@
   flex-direction: column;
 
   .settings-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding-top: 43px;
-     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 43px;
+
     img {
-        width: 21.67px;
-        height: 21.67px;
-        margin-right: 16px;
-      }
+      width: 21.67px;
+      height: 21.67px;
+      margin-right: 16px;
+    }
+
+    span {
+      cursor: pointer;
+    }
   }
-  
 }

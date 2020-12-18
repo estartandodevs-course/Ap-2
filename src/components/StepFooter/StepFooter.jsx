@@ -1,16 +1,14 @@
-import { Link } from "react-router-dom";
-
 import "./StepFooter.scss";
 
-export default function footer() {
+export default function footer({onSubmit}) {
   return (
     <div className="footer">
-      <Link id="anterior" to="/">
+      <span id="anterior">
         Anterior
-      </Link>
-      <Link id="proximo" to="/home">
+      </span>
+      <span id="proximo" onClick={onSubmit}>
         Próximo
-      </Link>
+      </span>
     </div>
   );
 }
