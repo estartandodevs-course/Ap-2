@@ -1,5 +1,4 @@
 import "./ViewFullProfile.scss";
-import { userFullProfile } from "../../mocks/UserFullProfile";
 import { StepHeader } from "../../components/StepHeader/StepHeader";
 import { RegisterHeader } from "../../components/HeaderStep1/HeaderStep1";
 import back from "../../assets/icons/arrow_back_ios_24px.svg";
@@ -9,20 +8,30 @@ import { useHistory } from "react-router-dom";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 import { useParams } from "react-router";
 import { Slider } from "../../components/Slider/Slider";
+import { getUsers } from "../../services/user.service";
 
 export function ViewFullProfile() {
+  const [profiles, setProfiles] = useState([]);
   const { id } = useParams();
-
   const [currentProfile, setProfile] = useState({});
 
   const history = useHistory();
 
+    useEffect(() => {
+    (async () => {
+      const data = await getUsers();
+      setProfiles(data);
+      console.log(data);
+    })();
+  }, []);
+
   useEffect(() => {
-    const userSelected = userFullProfile.find(
-      (user) => user.id.toString() === id.toString()
+    const userSelected = profiles.find(
+      (profile) => profile.id.toString() === id.toString()
     );
     userSelected && setProfile(userSelected);
-  }, [id]);
+  }, [profiles, id]);
+
 
   const {
     name = "",
@@ -108,7 +117,7 @@ export function ViewFullProfile() {
             <Typography type="label">Hobbies</Typography>
             <div className="modal-content">
               {hobbies.map((element, index) => {
-                return <span key={index}>{element.hobbie}</span>;
+                return <span key={index}>{element}</span>;
               })}
             </div>
           </div>
@@ -117,7 +126,7 @@ export function ViewFullProfile() {
             <Typography type="label">Interesses</Typography>
             <div className="modal-content">
               {interests?.map((element, index) => {
-                return <span key={index}>{element.interest}</span>;
+                return <span key={index}>{element}</span>;
               })}
             </div>
           </div>

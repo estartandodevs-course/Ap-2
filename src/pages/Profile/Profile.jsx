@@ -1,8 +1,7 @@
 import { Button } from "../../components/Button/Button";
 import ContainerCard from "../../components/ContainerCard/containerCard";
 import "./Profile.scss";
-import { profiles } from "../../mocks/Profiles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 import ThumbUp from "../../assets/icons/thumb_up_24px.svg";
@@ -13,31 +12,40 @@ import { RegisterHeader } from "../../components/HeaderStep1/HeaderStep1";
 import Typography from "../../components/Typography/Typography";
 import UserRank from "../../components/ClassificaçaoUser/UserRank";
 import Preferencias from "../../components/Preferencias/Preferencias";
-import { vetorImage, vetorImage2 } from "../../mocks/imagesPreferences";
-//import { getUsers } from "../../services/user.service";
+import { vetorImage } from "../../mocks/imagesPreferences";
+import { getUsers } from "../../services/user.service";
+import imgPerfil from '../../assets/images/avatar.svg';
+import firebase from 'firebase/app';
+import "firebase/auth";
 
 export function Profile() {
-  const [currentProfile, setProfile] = useState(1);
+  const [currentProfile, setProfile] = useState({index: 0, profile: {}});
   const history = useHistory();
-  //const [profiles, setProfiles] = useState([]);
+  const [profiles, setProfiles] = useState([]);
 
-  let showCurrentProfile = profiles.filter((option) => {
-    return option.id === currentProfile;
-  });
+  const {profile} = currentProfile;
 
-  // useEffect(() => {
-  //   (async () => {
-  //     const data = await getUsers();
-  //     setProfiles(data);
-  //     console.log(data);
-  //   })();
-  // }, []);
+  function nextProfile(){
+    const numberOfProfiles = profiles.length;
+    if(currentProfile.index+1 < numberOfProfiles){
+      setProfile(prev =>({index:prev.index+1, profile: profiles[prev.index+1]}))
+    }
+  }
+
+  useEffect(() => {
+    (async () => {
+      const data = await getUsers();
+      const currentUser = await firebase.auth().currentUser;
+      const userValids = data.filter(user =>user.email !== currentUser.email);
+      setProfiles(userValids);
+      setProfile({index: 0, profile: userValids[0]});
+    })();
+  }, []);
+
 
   return (
     <>
       <div className="profile-container">
-        {showCurrentProfile.map((option, index) => {
-          return (
             <>
               <RegisterHeader height="100%" width="100%" className="content">
                 <StepHeader
@@ -46,45 +54,38 @@ export function Profile() {
                   alt="Steps"
                   className="flex-start"
                 />
-                <img src={option.img} alt="Imagem Perfil"></img>
+               <img src={imgPerfil} alt="Imagem Perfil"/>
                 <UserRank Rank={4}></UserRank>
                 <Typography type="bigTitle">
-                  {option.name} - {option.age}
+                  {profile.name} - {profile.age}
                 </Typography>
                 <Typography type="bigTitle" className="ocupation">
-                  {option.ocupation}
+                  {profile.ocupation}
                 </Typography>
                 <Typography type="textSettings" className="bio-content">
-                  {option.bio}
+                  {profile.bio}
                 </Typography>
                 <div className="preferences">
-                  {currentProfile === 1 ? (
                     <Preferencias vetorImage={vetorImage} />
-                  ) : (
-                    <Preferencias vetorImage={vetorImage2} />
-                  )}
+                  
                 </div>
               </RegisterHeader>
 
               <Typography type="evaluationText">
-                {`Conhece ${option.name}?`}
+                {`Conhece ${profile.name}?`}
               </Typography>
 
               <ContainerCard
                 width="100%"
                 // height="100%"
                 className="container-profile"
-                text={`Gostaria de conversar com ${option.name}?`}
+                text={`Gostaria de conversar com ${profile.name}?`}
               >
-                <div className="btn-container" key={index}>
+                <div className="btn-container">
                   <img
                     src={ThumbDown}
                     alt="Não"
-                    onClick={() =>
-                      currentProfile === 2
-                        ? history.push("/search-profile")
-                        : setProfile(option.id + 1)
-                    }
+                    onClick={nextProfile}
                   ></img>
 
                   <Button
@@ -94,7 +95,7 @@ export function Profile() {
                     borderRadius="10px"
                     className="btn btn-font2 btn-text btn-line"
                     onClick={() =>
-                      history.push(`/view-full-profile/${option.id}`)
+                      history.push(`/view-full-profile/${profile.id}`)
                     }
                   >
                     Ver perfil completo
@@ -103,17 +104,11 @@ export function Profile() {
                   <img
                     src={ThumbUp}
                     alt="Sim"
-                    onClick={() =>
-                      currentProfile === 2
-                        ? history.push("/search-profile")
-                        : setProfile(option.id + 1)
-                    }
+                    onClick={nextProfile}
                   ></img>
                 </div>
               </ContainerCard>
             </>
-          );
-        })}
       </div>
       <NavBar statusSearch={true} statusHome={false} statusChat={false} />
     </>

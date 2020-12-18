@@ -36,8 +36,8 @@ const initialFormState = {
       "Arte"
     ],
     goals: {
-      quantityPeople: "R$ 800,00",
-      maxMonthAmount: 2,
+      quantityPeople:2,
+      maxMonthAmount: "R$ 800,00",
       livingLocation: "Universidade Federal de Minas Gerais",
       mainGoal: "Dividir valor do aluguel"
     },
@@ -112,9 +112,9 @@ export function RegisterFirstStep() {
             colorInput="rgba(204,204,204,1)"
             classInput="input"
             className="input-bio"
-            name="senha"
-            setValue={(value) => handleChange("senha", value)}
-            value={form.senha}
+            name="password"
+            setValue={(value) => handleChange("password", value)}
+            value={form.password}
           />
 
         <InputDate

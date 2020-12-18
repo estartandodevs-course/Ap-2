@@ -13,6 +13,8 @@ import iconMatches from "../../assets/icons/icon-matches.svg";
 import iconCalendar from "../../assets/icons/icon-calendar.svg";
 import iconConfig from "../../assets/icons/icon-config.svg";
 import Notif from "../../assets/icons/Notificação.svg";
+import firebase from 'firebase/app';
+import "firebase/auth";
 
 const SideBar = () => (
   <aside className="side-menu">
@@ -23,12 +25,15 @@ const SideBar = () => (
   </aside>
 );
 
-const Header = ({ onClick }) => (
-  <header>
+const Header = ({ onClick }) => {
+  const currentUser = firebase.auth().currentUser;
+  console.log(currentUser)
+ return (
+    <header>
     <div className="header">
       <ImagemPerfilMenor />
       <div className="header-components">
-        <Typography type="bigTitle">Isabel Vieira</Typography>
+        <Typography type="bigTitle">{currentUser.displayName || "Nome não registrado"}</Typography>
         <Button
           width="136px"
           background="#184177"
@@ -43,7 +48,8 @@ const Header = ({ onClick }) => (
     </div>
     <hr />
   </header>
-);
+ )
+};
 
 const Routes = () => {
   return (
