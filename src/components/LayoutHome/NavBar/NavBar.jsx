@@ -8,7 +8,6 @@ export function NavBar({statusSearch, statusHome, statusChat}) {
 
   const [iconSearch, setIconSearch] = useState(statusSearch);
   const [iconHome, setIconHome] = useState(statusHome);
-  const [iconChat, setIconChat] = useState(statusChat);
 
   function onChangeSearch() {
     if(iconSearch === false){
@@ -19,12 +18,6 @@ export function NavBar({statusSearch, statusHome, statusChat}) {
   function onChangeHome() {
     if(iconHome === false){
       setIconHome(true)
-    }
-  }
-
-  function onChangeChat() {
-    if(iconChat === true) {
-      setIconChat(true)
     }
   }
 

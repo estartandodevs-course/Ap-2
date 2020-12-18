@@ -2,7 +2,7 @@ import { Button } from "../../components/Button/Button";
 import ContainerCard from "../../components/ContainerCard/containerCard";
 import "./Profile.scss";
 import { profiles } from "../../mocks/Profiles";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 import ThumbUp from "../../assets/icons/thumb_up_24px.svg";

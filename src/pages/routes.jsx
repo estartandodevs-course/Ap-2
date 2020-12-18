@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { RegisterFourthStep } from "./RegisterFourthStep/RegisterFourthStep";
 import { Home } from "./Home/Home";
 import { RegisterFirstStep } from "./RegisterFirstStep/RegisterFirstStep";
-import { RegisterSecondStep } from "./RegisterSecondStep/RegisterSecondStep";
-import { RegisterThirdStep } from "./RegisterThirdStep/RegisterThirdStep";
 import { SearchProfile } from "./SearchProfile/SearchProfile";
 import { Login } from "./Login/Login";
 import { Profile } from "./Profile/Profile";
