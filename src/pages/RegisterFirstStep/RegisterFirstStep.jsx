@@ -12,19 +12,49 @@ import Footer from "../../components/StepFooter/StepFooter";
 import { options } from "../../mocks/GenderOptions";
 import { useState } from "react";
 import { Button } from "../../components/Button/Button";
-//import { createUser } from "../../services/user.service";
+import { createUser } from "../../services/user.service";
 
-export function RegisterFirstStep() {
-  const isRequired = true;
-
-  const [form, setForm] = useState({
+const initialFormState = {
     name: "",
     college: "",
     company: "",
     bio: "",
-    date: "",
+    dateBirth: "",
     gender: "",
-  });
+    email: "",
+    senha : "",
+    hobbies: [
+      "Cozinhar",
+      "Tocar instrumentos",
+      "Academia"
+    ],
+    interests: [
+      "Engenharia",
+      "Tecnologia",
+      "Desenvolvimento de Software",
+      "Música",
+      "Arte"
+    ],
+    goals: {
+      quantityPeople: "R$ 800,00",
+      maxMonthAmount: 2,
+      livingLocation: "Universidade Federal de Minas Gerais",
+      mainGoal: "Dividir valor do aluguel"
+    },
+    experience: {
+      timeSpent: "6 meses - 1 ano",
+      totalShared: 2,
+      sharedApHouse: true,
+      troubleLiving: "Sim",
+      totalPeople: 3,
+      sharedRoom: true
+    }
+}
+
+export function RegisterFirstStep() {
+  const isRequired = true;
+
+  const [form, setForm] = useState(initialFormState);
 
   function handleChange(name, value) {
     setForm({
@@ -34,9 +64,9 @@ export function RegisterFirstStep() {
     console.log(form);
   }
 
-  function onSubmit() {
-   // createUser(form);
-   console.log(form)
+  async function onSubmit() {
+    await createUser(form);
+    //console.log(form)
   }
 
   return (
@@ -61,9 +91,35 @@ export function RegisterFirstStep() {
         />
       </RegisterHeader>
       <section className="form">
+          <InputText
+            type="text"
+            label="Email"
+            isRequired={isRequired}
+            colorLabel="rgba(39,103,188,1)"
+            colorInput="rgba(204,204,204,1)"
+            classInput="input"
+            className="input-bio"
+            name="email"
+            setValue={(value) => handleChange("email", value)}
+            value={form.email}
+          />
+
+          <InputText
+            type="password"
+            label="Senha"
+            isRequired={isRequired}
+            colorLabel="rgba(39,103,188,1)"
+            colorInput="rgba(204,204,204,1)"
+            classInput="input"
+            className="input-bio"
+            name="senha"
+            setValue={(value) => handleChange("senha", value)}
+            value={form.senha}
+          />
+
         <InputDate
-          value={form.date}
-          onChange={(event) => handleChange("date", event.target.value)}
+          value={form.dateBirth}
+          onChange={(event) => handleChange("dateBirth", event.target.value)}
         />
         <SelectOptions
           options={options}
@@ -127,7 +183,7 @@ export function RegisterFirstStep() {
       <Button width="80px" height="30px" onClick={onSubmit}>
         Cadastrar
       </Button>
-      <Footer></Footer>
+      <Footer onSubmit={onSubmit} />
     </div>
   );
 }
