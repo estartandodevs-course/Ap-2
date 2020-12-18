@@ -1,4 +1,3 @@
-import imgPerfilMenor from "../../assets/images/fotoPerfilMenor.svg";
 import "./ImagemPerfilMenor.scss";
 import imgPerfil from '../../assets/images/avatar.svg';
 
