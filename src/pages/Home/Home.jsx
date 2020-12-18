@@ -8,7 +8,7 @@ export function Home() {
   const history = useHistory();
 
   function onClick() {
-    history.push("/");
+    history.push("/register");
   }
 
   return (

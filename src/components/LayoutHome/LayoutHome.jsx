@@ -13,22 +13,27 @@ import iconMatches from "../../assets/icons/icon-matches.svg";
 import iconCalendar from "../../assets/icons/icon-calendar.svg";
 import iconConfig from "../../assets/icons/icon-config.svg";
 import Notif from "../../assets/icons/Notificação.svg";
+import firebase from 'firebase/app';
+import "firebase/auth";
 
 const SideBar = () => (
   <aside className="side-menu">
-    <SideMenu src={iconNotif} notif={Notif} to="/home/notifications" />
-    <SideMenu src={iconCalendar} notif={Notif} to="/home/calendar" />
-    <SideMenu src={iconMatches} notif={Notif} to="/home/matches" />
-    <SideMenu src={iconConfig} notif={Notif} to="/home/settings" />
+    <SideMenu src={iconNotif} notif={Notif} to="/notifications" />
+    <SideMenu src={iconCalendar} notif={Notif} to="/calendar" />
+    <SideMenu src={iconMatches} notif={Notif} to="/matches" />
+    <SideMenu src={iconConfig} notif={Notif} to="/settings" />
   </aside>
 );
 
-const Header = ({ onClick }) => (
-  <header>
+const Header = ({ onClick }) => {
+  const currentUser = firebase.auth().currentUser;
+  console.log(currentUser)
+ return (
+    <header>
     <div className="header">
       <ImagemPerfilMenor />
       <div className="header-components">
-        <Typography type="bigTitle">Isabel Vieira</Typography>
+        <Typography type="bigTitle">{currentUser.displayName || "Nome não registrado"}</Typography>
         <Button
           width="136px"
           background="#184177"
@@ -43,16 +48,17 @@ const Header = ({ onClick }) => (
     </div>
     <hr />
   </header>
-);
+ )
+};
 
 const Routes = () => {
   return (
     <Switch>
-      <Route path="/home/notifications" component={Notifications} />
-      <Route path="/home/calendar" component={Calendar} />
-      <Route path="/home/matches" component={Matches} />
-      <Route path="/home/settings" component={Settings} />
-      <Redirect to="/home/notifications" />
+      <Route path="/notifications" component={Notifications} />
+      <Route path="/calendar" component={Calendar} />
+      <Route path="/matches" component={Matches} />
+      <Route path="/settings" component={Settings} />
+      <Redirect to="/notifications" />
     </Switch>
   );
 };
