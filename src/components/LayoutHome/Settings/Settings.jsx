@@ -5,7 +5,8 @@ import help from "../../../assets/icons/help_outline_24px.png";
 import notification from "../../../assets/icons/Icon-notificações.png";
 import about from "../../../assets/icons/info_24px.png";
 import privacy from "../../../assets/icons/lock_24px 2.png";
-import location from "../../../assets/icons/room_24px.png";
+import logout from "../../../assets/icons/logout.svg";
+
 
 export const Settings = () => (
   <div className="settings">
@@ -24,8 +25,8 @@ export const Settings = () => (
         Privacidade
       </Typography>
       <Typography type="textSettings">
-        <img src={location} alt="Localização" />
-        Localização
+        <img src={logout} alt="Sair" />
+        Sair
       </Typography>
       <Typography type="textSettings">
         <img src={help} alt="Ajuda" />
