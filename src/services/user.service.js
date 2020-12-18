@@ -9,7 +9,6 @@ export async function getUsers() {
 }
 
 export async function createUser(userForm) {
-  console.log(userForm);
   const userFormJson = JSON.stringify(userForm);
   const options = { method: "post", body: userFormJson, headers:{'content-type': 'application/json'} };
   const response = await fetch(BASE_API + "user", options).then((response) =>

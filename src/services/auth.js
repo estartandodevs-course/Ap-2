@@ -2,7 +2,6 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 export async function login(email, password) {
-  console.log(email, password);
   try {
     const user = await firebase
       .auth()
@@ -18,7 +17,6 @@ export async function login(email, password) {
 
 export function onAuthStateChanged(callback) {
   return firebase.auth().onAuthStateChanged((user) => {
-    console.log(user)
     if (user) {
       callback({ isLogged: true });
     } else {
