@@ -5,7 +5,6 @@
   height: 100%;
   width: 100%;
   min-width: 375px;
-  //min-height: 785px;
   background: linear-gradient(
     180deg,
     #87e4c7 3.05%,
@@ -16,9 +15,7 @@
   .logo {
     width: 110px;
     height: 110px;
-   // background: #c4c4c4;
     margin: 56px auto;
-   // margin-bottom: 155px;
     background-image: url("../../assets/images/Logo.svg");
     background-repeat: no-repeat;
   }
@@ -39,7 +36,6 @@
     .input-container {
       display: flex;
       flex-direction: row;
-      //    margin-left: 14px;
     }
   }
 
@@ -48,5 +44,16 @@
     flex-direction: column;
     align-items: center;
     margin: auto;
+  }
+
+  .register-text{
+    font-family: "Baloo Tamma 2";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #FBFBFB;
+
   }
 }

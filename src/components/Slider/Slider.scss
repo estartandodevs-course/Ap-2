@@ -24,6 +24,18 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+.slider::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #87E4C7;
+    height: 24px;
+    width: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
 .slider::-webkit-slider-runnable-track {
     border-radius: 10px;
 }

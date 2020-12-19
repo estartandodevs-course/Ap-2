@@ -13,42 +13,54 @@ import iconMatches from "../../assets/icons/icon-matches.svg";
 import iconCalendar from "../../assets/icons/icon-calendar.svg";
 import iconConfig from "../../assets/icons/icon-config.svg";
 import Notif from "../../assets/icons/Notificação.svg";
-import firebase from 'firebase/app';
+import firebase from "firebase/app";
 import "firebase/auth";
 
 const SideBar = () => (
   <aside className="side-menu">
-    <SideMenu src={iconNotif} notif={Notif} to="/notifications" />
-    <SideMenu src={iconCalendar} notif={Notif} to="/calendar" />
-    <SideMenu src={iconMatches} notif={Notif} to="/matches" />
-    <SideMenu src={iconConfig} notif={Notif} to="/settings" />
+    <SideMenu
+      src={iconNotif}
+      notif={Notif}
+      to="/notifications"
+      alt="Notificação"
+    />
+    <SideMenu
+      src={iconCalendar}
+      notif={Notif}
+      to="/calendar"
+      alt="Notificação"
+    />
+    <SideMenu src={iconMatches} notif={Notif} to="/matches" alt="Notificação" />
+    <SideMenu src={iconConfig} to="/settings" />
   </aside>
 );
 
 const Header = ({ onClick }) => {
   const currentUser = firebase.auth().currentUser;
-  console.log(currentUser)
- return (
+  console.log(currentUser);
+  return (
     <header>
-    <div className="header">
-      <ImagemPerfilMenor />
-      <div className="header-components">
-        <Typography type="bigTitle">{currentUser.displayName || "Nome não registrado"}</Typography>
-        <Button
-          width="136px"
-          background="#184177"
-          height="32px"
-          borderRadius="10px"
-          className="btn btn-profile btn-font1 btn-text"
-          onClick={onClick}
-        >
-          Editar Perfil
-        </Button>
+      <div className="header">
+        <ImagemPerfilMenor />
+        <div className="header-components">
+          <Typography type="bigTitle" className="align-text">
+            {currentUser.displayName || "Nome não registrado"}
+          </Typography>
+          <Button
+            width="136px"
+            background="#184177"
+            height="32px"
+            borderRadius="10px"
+            className="btn btn-profile btn-font1 btn-text"
+            onClick={onClick}
+          >
+            Editar Perfil
+          </Button>
+        </div>
       </div>
-    </div>
-    <hr />
-  </header>
- )
+      <hr />
+    </header>
+  );
 };
 
 const Routes = () => {
@@ -64,13 +76,13 @@ const Routes = () => {
 };
 
 export const LayoutHome = ({ onClick }) => (
-    <div className="layout-container">
-      {/* <div className="layout-content"> */}
-        <div className="layout-header-content">
-          <Header onClick={onClick} />
-          <Routes />
-        </div>
-        <SideBar />
-      {/* </div> */}
+  <div className="layout-container">
+    {/* <div className="layout-content"> */}
+    <div className="layout-header-content">
+      <Header onClick={onClick} />
+      <Routes />
     </div>
+    <SideBar />
+    {/* </div> */}
+  </div>
 );

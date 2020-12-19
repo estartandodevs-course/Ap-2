@@ -11,48 +11,45 @@ import { RegisterHeader } from "../../components/HeaderStep1/HeaderStep1";
 import Footer from "../../components/StepFooter/StepFooter";
 import { options } from "../../mocks/GenderOptions";
 import { useState } from "react";
-import { Button } from "../../components/Button/Button";
 import { createUser } from "../../services/user.service";
+//import { useHistory } from "react-router-dom";
 
 const initialFormState = {
-    name: "",
-    college: "",
-    company: "",
-    bio: "",
-    dateBirth: "",
-    gender: "",
-    email: "",
-    senha : "",
-    hobbies: [
-      "Cozinhar",
-      "Tocar instrumentos",
-      "Academia"
-    ],
-    interests: [
-      "Engenharia",
-      "Tecnologia",
-      "Desenvolvimento de Software",
-      "Música",
-      "Arte"
-    ],
-    goals: {
-      quantityPeople:2,
-      maxMonthAmount: "R$ 800,00",
-      livingLocation: "Universidade Federal de Minas Gerais",
-      mainGoal: "Dividir valor do aluguel"
-    },
-    experience: {
-      timeSpent: "6 meses - 1 ano",
-      totalShared: 2,
-      sharedApHouse: true,
-      troubleLiving: "Sim",
-      totalPeople: 3,
-      sharedRoom: true
-    }
-}
+  name: "",
+  college: "",
+  company: "",
+  bio: "",
+  dateBirth: "",
+  gender: "",
+  email: "",
+  senha: "",
+  hobbies: ["Cozinhar", "Tocar instrumentos", "Academia"],
+  interests: [
+    "Engenharia",
+    "Tecnologia",
+    "Desenvolvimento de Software",
+    "Música",
+    "Arte",
+  ],
+  goals: {
+    quantityPeople: 2,
+    maxMonthAmount: "R$ 800,00",
+    livingLocation: "Universidade Federal de Minas Gerais",
+    mainGoal: "Dividir valor do aluguel",
+  },
+  experience: {
+    timeSpent: "6 meses - 1 ano",
+    totalShared: 2,
+    sharedApHouse: true,
+    troubleLiving: "Sim",
+    totalPeople: 3,
+    sharedRoom: true,
+  },
+};
 
 export function RegisterFirstStep() {
   const isRequired = true;
+  //const history = useHistory();
 
   const [form, setForm] = useState(initialFormState);
 
@@ -61,12 +58,11 @@ export function RegisterFirstStep() {
       ...form,
       [name]: value,
     });
-    console.log(form);
   }
 
   async function onSubmit() {
     await createUser(form);
-    //console.log(form)
+   // history.push("/");
   }
 
   return (
@@ -91,31 +87,31 @@ export function RegisterFirstStep() {
         />
       </RegisterHeader>
       <section className="form">
-          <InputText
-            type="text"
-            label="Email"
-            isRequired={isRequired}
-            colorLabel="rgba(39,103,188,1)"
-            colorInput="rgba(204,204,204,1)"
-            classInput="input"
-            className="input-bio"
-            name="email"
-            setValue={(value) => handleChange("email", value)}
-            value={form.email}
-          />
+        <InputText
+          type="text"
+          label="Email"
+          isRequired={isRequired}
+          colorLabel="rgba(39,103,188,1)"
+          colorInput="rgba(204,204,204,1)"
+          classInput="input"
+          className="input-bio"
+          name="email"
+          setValue={(value) => handleChange("email", value)}
+          value={form.email}
+        />
 
-          <InputText
-            type="password"
-            label="Senha"
-            isRequired={isRequired}
-            colorLabel="rgba(39,103,188,1)"
-            colorInput="rgba(204,204,204,1)"
-            classInput="input"
-            className="input-bio"
-            name="password"
-            setValue={(value) => handleChange("password", value)}
-            value={form.password}
-          />
+        <InputText
+          type="password"
+          label="Senha"
+          isRequired={isRequired}
+          colorLabel="rgba(39,103,188,1)"
+          colorInput="rgba(204,204,204,1)"
+          classInput="input"
+          className="input-bio"
+          name="password"
+          setValue={(value) => handleChange("password", value)}
+          value={form.password}
+        />
 
         <InputDate
           value={form.dateBirth}
@@ -180,9 +176,6 @@ export function RegisterFirstStep() {
         />
       </section>
 
-      <Button width="80px" height="30px" onClick={onSubmit}>
-        Cadastrar
-      </Button>
       <Footer onSubmit={onSubmit} />
     </div>
   );

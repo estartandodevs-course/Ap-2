@@ -1,7 +1,8 @@
 import { BASE_API } from "../config/api";
 
 export async function getUsers() {
-  const users = await fetch(BASE_API + "user").then((response) =>
+  const proxyURL = "https://cors-anywhere.herokuapp.com/";
+  const users = await fetch(proxyURL + BASE_API + "user").then((response) =>
     response.json().then((data) => data)
   );
 
@@ -10,10 +11,16 @@ export async function getUsers() {
 
 export async function createUser(userForm) {
   const userFormJson = JSON.stringify(userForm);
-  const options = { method: "post", body: userFormJson, headers:{'content-type': 'application/json'} };
-  const response = await fetch(BASE_API + "user", options).then((response) =>
-    response.json().then((data) => data)
-);
+  const options = {
+    method: "post",
+    body: userFormJson,
+    headers: { "content-type": "application/json" },
+  };
+  const proxyURL = "https://cors-anywhere.herokuapp.com/";
+  const response = await fetch(
+    proxyURL + BASE_API + "user",
+    options
+  ).then((response) => response.json().then((data) => data));
 
   return response;
 }

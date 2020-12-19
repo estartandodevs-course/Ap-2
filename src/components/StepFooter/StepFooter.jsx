@@ -7,7 +7,7 @@ export default function footer({onSubmit}) {
         Anterior
       </span>
       <span id="proximo" onClick={onSubmit}>
-        Próximo
+        Confirmar
       </span>
     </div>
   );
