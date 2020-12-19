@@ -21,7 +21,6 @@ export function ViewFullProfile() {
     (async () => {
       const data = await getUsers();
       setProfiles(data);
-      console.log(data);
     })();
   }, []);
 

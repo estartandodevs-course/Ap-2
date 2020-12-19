@@ -15,7 +15,6 @@ export function Login() {
   const [password, setPassword] = useState("");
 
   async function handleLogin() {
-    console.log(email, password);
     const response = await login(email, password);
     if (response.success) {
       history.push("/");

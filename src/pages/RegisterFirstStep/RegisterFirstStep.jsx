@@ -12,7 +12,7 @@ import Footer from "../../components/StepFooter/StepFooter";
 import { options } from "../../mocks/GenderOptions";
 import { useState } from "react";
 import { createUser } from "../../services/user.service";
-//import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const initialFormState = {
   name: "",
@@ -22,7 +22,7 @@ const initialFormState = {
   dateBirth: "",
   gender: "",
   email: "",
-  senha: "",
+  password: "",
   hobbies: ["Cozinhar", "Tocar instrumentos", "Academia"],
   interests: [
     "Engenharia",
@@ -49,7 +49,7 @@ const initialFormState = {
 
 export function RegisterFirstStep() {
   const isRequired = true;
-  //const history = useHistory();
+  const history = useHistory();
 
   const [form, setForm] = useState(initialFormState);
 
@@ -60,9 +60,11 @@ export function RegisterFirstStep() {
     });
   }
 
+  function voltar(){
+    history.push("/login");
+  }
   async function onSubmit() {
-    await createUser(form);
-   // history.push("/");
+    await createUser(form).then(voltar());
   }
 
   return (
@@ -176,7 +178,7 @@ export function RegisterFirstStep() {
         />
       </section>
 
-      <Footer onSubmit={onSubmit} />
+      <Footer onSubmit={onSubmit} voltar={voltar}/>
     </div>
   );
 }
