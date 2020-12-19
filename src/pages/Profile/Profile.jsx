@@ -47,11 +47,11 @@ export function Profile() {
     })();
   }, []);
 
-  function getAge(age) {
-    const yearBirth = new Date(age).getFullYear();
+  function getAge(dateBirth) {
+    const yearBirth = new Date(dateBirth).getFullYear();
     const currentYear = new Date().getFullYear();
 
-    if (age !== "") {
+    if (dateBirth !== "") {
       return currentYear - yearBirth + " anos";
     } else {
       return "";
