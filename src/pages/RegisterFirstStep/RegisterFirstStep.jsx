@@ -88,6 +88,7 @@ export function RegisterFirstStep() {
           name="name"
           setValue={(value) => handleChange("name", value)}
           value={form.name}
+        //  className="input"
         />
       </RegisterHeader>
       <section className="form">
@@ -180,9 +181,9 @@ export function RegisterFirstStep() {
         />
       </section>
 
-      <Button width="80px" height="30px" onClick={onSubmit}>
+      {/* <Button width="80px" height="30px" onClick={onSubmit}>
         Cadastrar
-      </Button>
+      </Button> */}
       <Footer onSubmit={onSubmit} />
     </div>
   );

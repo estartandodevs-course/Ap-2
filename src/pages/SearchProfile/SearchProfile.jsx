@@ -19,7 +19,9 @@ export function SearchProfile() {
   function onClick(){
     history.push("/profile");
   }
+
   let isRequired = true;
+
   return (
     <div className="searchProfile-content">
       <RegisterHeader height="76px" className="registerHeader">
@@ -27,7 +29,7 @@ export function SearchProfile() {
       </RegisterHeader>
       <main>
         <Typography type="bigLabel">Filtrar por:</Typography>
-        <SelectOptions options={options} content="Gênero:" />
+        <SelectOptions options={options} content="Gênero:" setValue={(value) => console.log(value)}/>
 
         <SliderFilter /> 
 
