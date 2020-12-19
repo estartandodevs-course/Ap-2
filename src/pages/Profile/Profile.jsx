@@ -47,6 +47,9 @@ export function Profile() {
     })();
   }, []);
 
+  const yearBirth = new Date(profile.dateBirth).getFullYear();
+  const currentYear = new Date().getFullYear();
+
   return (
     <>
       <div className="profile-container">
@@ -61,7 +64,7 @@ export function Profile() {
             <img src={imgPerfil} alt="Imagem Perfil" />
             <UserRank Rank={4}></UserRank>
             <Typography type="bigTitle">
-              {profile.name} - {profile.age}
+              {profile.name} - {`${currentYear - yearBirth} anos` || ""}
             </Typography>
             <Typography type="bigTitle" className="ocupation">
               {profile.ocupation}
