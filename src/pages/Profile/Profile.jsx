@@ -47,8 +47,16 @@ export function Profile() {
     })();
   }, []);
 
-  const yearBirth = new Date(profile.dateBirth).getFullYear();
-  const currentYear = new Date().getFullYear();
+  function getAge(age) {
+    const yearBirth = new Date(age).getFullYear();
+    const currentYear = new Date().getFullYear();
+
+    if (age !== "") {
+      return currentYear - yearBirth + " anos";
+    } else {
+      return "";
+    }
+  }
 
   return (
     <>
@@ -64,10 +72,10 @@ export function Profile() {
             <img src={imgPerfil} alt="Imagem Perfil" />
             <UserRank Rank={4}></UserRank>
             <Typography type="bigTitle">
-              {profile.name} - {`${currentYear - yearBirth} anos` || ""}
+              {profile.name} - {getAge(profile.dateBirth)}
             </Typography>
             <Typography type="bigTitle" className="ocupation">
-              {profile.ocupation}
+              {profile.company || profile.college}
             </Typography>
             <Typography type="textSettings" className="bio-content">
               {profile.bio}
