@@ -37,7 +37,6 @@ const SideBar = () => (
 
 const Header = ({ onClick }) => {
   const currentUser = firebase.auth().currentUser;
-  console.log(currentUser);
   return (
     <header>
       <div className="header">

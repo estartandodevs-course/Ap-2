@@ -4,7 +4,7 @@ import HomeNavbar from "../../../components/HomeNavbar/HomeNavbar";
 import "./NavBar.scss";
 
 
-export function NavBar({statusSearch, statusHome, statusChat}) {
+export function NavBar({statusSearch, statusHome}) {
 
   const [iconSearch, setIconSearch] = useState(statusSearch);
   const [iconHome, setIconHome] = useState(statusHome);
@@ -25,7 +25,7 @@ export function NavBar({statusSearch, statusHome, statusChat}) {
   return (
   <div className="navbar">
     <HomeNavbar>
-      <Link onClick={onChangeSearch} to="/search-profile">
+      <Link onClick={onChangeSearch} to="/profile">
           {(iconSearch === true) ?
            (<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18.582 16.3522H17.4077L16.9914 15.9508C18.4483 14.2561 19.3253 12.056 19.3253 9.66266C19.3253 4.3259 14.9994 0 9.66266 0C4.3259 0 0 4.3259 0 9.66266C0 14.9994 4.3259 19.3253 9.66266 19.3253C12.056 19.3253 14.2561 18.4483 15.9508 16.9914L16.3522 17.4077V18.582L23.785 26L26 23.785L18.582 16.3522Z" fill="#2767BC" />
