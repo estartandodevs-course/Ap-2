@@ -11,28 +11,28 @@ export const months = [
       id: 2,
       month: "Fevereiro",
       tasks: [
-        { day: 22, taskName: "Encontro com Maria!" },
-        { day: 25, taskName: "Encontro com Maria!" },
-        { day: 28, taskName: "Encontro com Maria!" },
+        { day: 22, taskName: "Encontro com Lucas!" },
+        { day: 25, taskName: "Encontro com Rita!" },
+        { day: 28, taskName: "Encontro com Tiago!" },
       ],
     },
     {
       id: 3,
       month: "Março",
       tasks: [
-        { day: 20, taskName: "Encontro com Maria!" },
+        { day: 20, taskName: "Encontro com Carla!" },
         { day: 24, taskName: "Encontro com Julia!" },
       ],
     },
     {
       id: 4,
       month: "Abril",
-      tasks: [{ day: 13, taskName: "Encontro com Maria!" }],
+      tasks: [{ day: 13, taskName: "Encontro com Laura!" }],
     },
     {
       id: 5,
       month: "Maio",
-      tasks: [{ day: 18, taskName: "Encontro com Maria!" }],
+      tasks: [{ day: 18, taskName: "Encontro com Vitória!" }],
     },
     {
       id: 6,

@@ -13,12 +13,12 @@ export const Notifications = () => (
     />
     <ContainerCard
       image={imgContainerPic}
-      text="Maria também gostaria de conversar com você"
+      text="Maria também gostaria de te conhecer pessoalmente"
       className="containerNotificacao"
     />
     <ContainerCard
       image={imgContainerPic}
-      text="Maria também gostaria de conversar com você"
+      text="Maria aceitou sua proposta de horário para encontro"
       className="containerNotificacao"
     />
   </div>

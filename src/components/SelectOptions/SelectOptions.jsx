@@ -85,10 +85,7 @@ export function SelectOptions(props) {
           components={{ Option }}
           styles={customStyles}
           classNamePrefix="select"
-          // defaultValue={options[0]}
           placeholder="Selecione"
-         // value={value}
-
         />
       ) : null}
     </div>

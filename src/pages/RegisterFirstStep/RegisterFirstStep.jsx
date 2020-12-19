@@ -12,7 +12,7 @@ import Footer from "../../components/StepFooter/StepFooter";
 import { options } from "../../mocks/GenderOptions";
 import { useState } from "react";
 import { createUser } from "../../services/user.service";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 
 const initialFormState = {
   name: "",
@@ -49,7 +49,7 @@ const initialFormState = {
 
 export function RegisterFirstStep() {
   const isRequired = true;
-  const history = useHistory();
+  //const history = useHistory();
 
   const [form, setForm] = useState(initialFormState);
 
@@ -62,6 +62,7 @@ export function RegisterFirstStep() {
 
   async function onSubmit() {
     await createUser(form);
+   // history.push("/");
   }
 
   return (

@@ -5,18 +5,18 @@ import { NavBar } from "../../components/LayoutHome/NavBar/NavBar";
 import { SelectOptions } from "../../components/SelectOptions/SelectOptions";
 import { StepHeader } from "../../components/StepHeader/StepHeader";
 import Typography from "../../components/Typography/Typography";
-import './SearchProfile.scss';
-import {options} from  '../../mocks/GenderOptions';
+import "./SearchProfile.scss";
+import { options } from "../../mocks/GenderOptions";
 import Checkbox from "../../components/Checkbox/Checkbox";
 import { SliderFilter } from "../../components/SliderFilter/SliderFilter";
 import { InputText } from "../../components/InputText/InputText";
 import { useHistory } from "react-router-dom";
+import { experienceTime } from "../../mocks/ExperienceTime";
 
 export function SearchProfile() {
-
   const history = useHistory();
 
-  function onClick(){
+  function onClick() {
     history.push("/profile");
   }
 
@@ -25,13 +25,20 @@ export function SearchProfile() {
   return (
     <div className="searchProfile-content">
       <RegisterHeader height="76px" className="registerHeader">
-        <StepHeader content="O perfil perfeito" className="step-container center"/>
+        <StepHeader
+          content="O perfil perfeito"
+          className="step-container center"
+        />
       </RegisterHeader>
       <main>
         <Typography type="bigLabel">Filtrar por:</Typography>
-        <SelectOptions options={options} content="Gênero:" setValue={(value) => console.log(value)}/>
+        <SelectOptions
+          options={options}
+          content="Gênero:"
+          setValue={(value) => console.log(value)}
+        />
 
-        <SliderFilter /> 
+        <SliderFilter />
 
         <Checkbox
           content="Gostaria de morar com estudantes"
@@ -39,7 +46,15 @@ export function SearchProfile() {
           id="check3"
           classInput="input1"
         >
-           <InputText type="text" label="Faculdade/Escola" isRequired={isRequired} colorLabel="rgba(39,103,188,1)" colorInput="rgba(204,204,204,1)" classInput="input1" className="input-bio"/>
+          <InputText
+            type="text"
+            label="Faculdade/Escola"
+            isRequired={isRequired}
+            colorLabel="rgba(39,103,188,1)"
+            colorInput="rgba(204,204,204,1)"
+            classInput="input1"
+            className="input-bio"
+          />
         </Checkbox>
 
         <Checkbox
@@ -54,6 +69,11 @@ export function SearchProfile() {
           for="check5"
           id="check5"
           classInput="input"
+        />
+        <SelectOptions
+          options={experienceTime}
+          content="Tempo de experiência dividindo:"
+          setValue={(value) => console.log(value)}
         />
 
         <Checkbox
@@ -80,7 +100,6 @@ export function SearchProfile() {
         >
           Mostrar perfis filtrados
         </Button>
-
       </main>
 
       <NavBar statusSearch={true} statusHome={false} statusChat={false} />
