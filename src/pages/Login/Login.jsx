@@ -20,7 +20,7 @@ export function Login() {
     if (response.success) {
       history.push("/");
     } else {
-      console.log("login inválido");
+      alert("Login inválido");
     }
   }
 
@@ -73,8 +73,8 @@ export function Login() {
           </Button>
         </div>
       </ContainerCard>
-      <p>
-        Ainda não se cadastrou?
+      <p className="register-text">
+        Ainda não se cadastrou? {" "}
         <Link to="/register" className="register-link">
           Cadastre-se
         </Link>
