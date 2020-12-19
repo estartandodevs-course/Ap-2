@@ -78,7 +78,7 @@ export function SearchProfile() {
           className="btn btn-font1 btn-text"
           onClick={onClick}
         >
-          Mostrar todos perfis
+          Mostrar perfis filtrados
         </Button>
 
       </main>

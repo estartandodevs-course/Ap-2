@@ -8,21 +8,19 @@ import senhaIcon from "../../assets/icons/vpn_key_24px_outlined.svg";
 import { login } from "../../services/auth";
 import { useState } from "react";
 
-
 export function Login() {
   const history = useHistory();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   async function handleLogin() {
-    console.log(email, password)
+    console.log(email, password);
     const response = await login(email, password);
     if (response.success) {
       history.push("/");
-    }
-    else {
-      console.log("login inválido")
+    } else {
+      console.log("login inválido");
     }
   }
 
@@ -75,9 +73,12 @@ export function Login() {
           </Button>
         </div>
       </ContainerCard>
-      <p>Ainda não se cadastrou?
-      <Link to="/register" className="register-link"> Cadastre-se</Link>
-       </p>
+      <p>
+        Ainda não se cadastrou?
+        <Link to="/register" className="register-link">
+          Cadastre-se
+        </Link>
+      </p>
     </div>
   );
 }
